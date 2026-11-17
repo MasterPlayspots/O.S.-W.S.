@@ -2,6 +2,8 @@
 
 Datum: 17.11.2026. Basis: `feat/uniforce-workspace` bei `b8902d887960481471b5718bcfe53262271a9ae4`, aufbauend auf main `3b82b64a85a1546c495a876443d6eb3f8cd9f499`. Öffentliche White-Label-Weiterentwicklung als O.A. - O.S von ourark.io. Die Veröffentlichung erhält beide Entwicklungslinien.
 
+Geprüfter Code-/Dokumentationscommit: `14238ff9f06e401845147f1700337bac47777c79`; lokaler Index und GitHub-Tree identisch: `ffbf0e3ede79f207426ed80c7789bd2f643bb28c`. Die nachfolgende Ergänzung pinnt diesen Nachweis in der Dokumentation.
+
 ## Automatisiert
 
 `npm test`: **54/54 bestanden**, Node.js **24.22.1**, Linux. Vor der Erweiterung 47/47; sieben neue Tests prüfen Branding und Memory einschließlich Fehlerfällen. Keine npm-Abhängigkeiten installiert.
@@ -28,3 +30,8 @@ Browser-Konsole zeigte Fehler der Browser-Erweiterung beim Versand eigener Metad
 Kein echter Modell-/Providerlauf in diesem Release-QA; Modelltests nutzen Fixtures. Keine produktive Agentensteuerung. Keine Cloud-Memory, keine Servermigration, kein Internet-/Mehrbenutzerbetrieb. Branding-Overrides wurden im Vertrag/HTTP getestet; ein vollständiger visueller Vergleich jeder kundenspezifischen Kombination ist nicht enthalten. Kein vollständiger Accessibility-/Mobilgeräte-/Betriebssystemaudit. Error-/Stale-Memory-Fälle wurden automatisiert geprüft; die Screenshots zeigen den erfolgreichen Beispielanschluss.
 
 Ein datei-/musterbasierter Check ist kein vollständiger Secret-/DLP-Audit und keine Bestätigung einer erfolgreichen Schlüsselrotation. Private Laufzeitdaten sind nicht Teil des Release-Trees. Die Kampagne enthält 30 Motive, 120 Kanalentwürfe und vier originale Agentenrollen; Videos, Kontoverbindungen, Terminierung und Social-Veröffentlichung sind nicht erfolgt.
+
+
+## Ergänzende Releasechecks
+
+JavaScript-Syntaxprüfung aller Quell-/Browser-/CLI-Dateien bestanden. Interne Markdown-Dateilinks vorhanden; CSV/JSON-Plan umfasst 30 Tage und Publishing-Log 120 Zeilen. Der synthetische Bridge-Ersttest importiert eine Session und einen Usage-Eintrag. `git diff --cached --check` nach Normalisierung der CSV-Zeilenenden ohne Befund. Erkennbare Token-/Private-Key-Muster im geprüften Textbestand: keine Treffer; kein umfassender Audit.

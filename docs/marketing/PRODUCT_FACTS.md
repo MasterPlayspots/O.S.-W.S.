@@ -25,10 +25,10 @@ Diese Matrix verhindert, dass ein Marketingentwurf eine geplante Integration als
 
 | Feld | Wert |
 |---|---|
-| Geprüfter Release/Commit | noch einzutragen |
+| Geprüfter Release/Commit | v0.4.0 · `14238ff9f06e401845147f1700337bac47777c79` · siehe STATE.md |
 | Prüfung durchgeführt am | 17.11.2026 |
 | Test-/Browsernachweise | 54/54 lokal; docs/VERIFICATION_0.4.md und docs/screenshots/ |
-| Verifizierte Claim-IDs | C02, C04, C06–C12 im dokumentierten Umfang; C01 mit öffentlichem Release bestätigen |
+| Verifizierte Claim-IDs | C01, C02, C04, C06–C12 im dokumentierten Umfang; öffentliche main-Referenz vor Kampagnenstart erneut prüfen |
 | Zurückgestellte Claim-IDs / Grund | C03: Pin/Resize vor Aufnahme erneut zeigen; C05: eigenes Branding visuell vor/nach aufnehmen. Vertrags-/API-Tests liegen vor. |
 | Erste geplante Veröffentlichung | noch nicht terminiert |
 
