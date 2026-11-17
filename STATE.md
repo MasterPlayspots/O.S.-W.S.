@@ -54,3 +54,15 @@ Quelländerung durch Revert des 0.2-Commits rücknehmbar. Profile bleiben lokal 
 ## Remote-Nachweis 0.2
 
 Am 17.11.2026 auf `main` veröffentlicht: Implementierungscommit `2cf1b2a333181e67413f0cb6e99c3e5d5df4e87a`. Anschließender anonymer Git-Fetch erfolgreich; `git diff --exit-code` und `git status --short` waren leer. Die GitHub-Refs-API bestätigte denselben HEAD. Dieser Nachweis folgt als reiner Dokumentationscommit; keine erneute Codeänderung oder Ausführung.
+
+## Installation und Agentenübergabe · 17.11.2026
+
+Auftrag: Installationsanleitung für das Team, konkreter Weg zur Agentenintegration und ehrliche Prüfung der Vollständigkeit im öffentlichen Repository.
+
+- Neu: `docs/INSTALLATION.md` mit Mac-Voraussetzungen, Start, Einrichtung, Update, Backup-/Rücknahmehinweisen und Fehlerhilfe. Node 24 LTS mit aktuellem Patchstand empfohlen; Node 20 trotz technischer Mindestangabe nicht mehr als neue Installation empfohlen.
+- Neu: `docs/AGENT_HANDOFF.md` mit kopierbarem Coding-Agentenauftrag, vorhandenen Dateipfaden, lokalem HTTP-Beispiel und abgegrenzten Integrationspaketen. Vorgeschlagene neue Modell-/Adapterdateien ausdrücklich als noch nicht vorhanden markiert.
+- Neu: `docs/INTEGRATION_MATRIX.md` mit implementierten Funktionen, offenen Verbindungen und nicht importierten privaten Altbeständen.
+- README und AGENTS verlinken den Einstieg; Quellen und Installationsroadmap aktualisiert. Öffentlicher Dateibestand vor dieser Ergänzung: 27 Dateien, danach 30. Keine Produktcodeänderung, kein neuer Modellanschluss und keine Installation auf einem Nutzergerät.
+- Nachweis: Den unveränderten dokumentierten Node-Beispielcode extrahiert und gegen eine isolierte lokale HTTP-Instanz ausgeführt (nur Testport angepasst): drei sichtbare Elemente, fünf Anschlussaufgaben, `modelConnected: false`, keine Profilschreibvorgänge. Prozess und temporären Testspeicher danach entfernt.
+- `npm test`: erneut 26/26 bestanden, Node v24.22.1. Lokale Dokumentationslinks gültig. Keine neue Browser-/macOS-/iPhone-Abnahme in diesem Dokumentationslauf.
+- Umfang/Rücknahme: ausschließlich neue beziehungsweise aktualisierte Dokumentationsdateien; per Commit-Revert rücknehmbar. Keine Secrets, private Codehistorie oder Laufzeitdaten hinzugefügt. Ausgangs-HEAD für diesen Lauf: `10f02c4ef6bae9b593e0c3ee3d1ffc5c92723874`.

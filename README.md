@@ -6,7 +6,9 @@ Ein Arbeitsplatz, der ausgewählte Quellen einordnet, deine Prioritäten aufnimm
 
 ## Starten
 
-Node >=20 muss vorhanden sein. Keine zusätzlichen npm-Pakete erforderlich.
+Für neue Installationen empfehlen wir Node 24 LTS mit aktuellem Patchstand; getestet wurde die 24er-Reihe. Die technische Mindestangabe bleibt `>=20`, Node 20 ist inzwischen EOL. Keine zusätzlichen npm-Pakete erforderlich.
+
+**Einstieg:** [Installationsanleitung](docs/INSTALLATION.md) · [Startauftrag für Coding-Agenten](docs/AGENT_HANDOFF.md) · [Was ist enthalten?](docs/INTEGRATION_MATRIX.md)
 
 ```sh
 git clone https://github.com/MasterPlayspots/O.S.-W.S..git
@@ -49,6 +51,9 @@ node bin/oa.mjs plan --inventory .local/inventory.json --preferences examples/pr
 
 ## Nachweise und Weiterarbeit
 
+- [Installation auf dem Mac und Fehlerhilfe](docs/INSTALLATION.md)
+- [Agentenübergabe mit ausführbarem API-Beispiel](docs/AGENT_HANDOFF.md)
+- [Vollständigkeit und offene Verbindungen](docs/INTEGRATION_MATRIX.md)
 - [Entwicklungsstand und nächste Schritte](STATE.md)
 - [Lokale API, Speicherung und Adaptervertrag](docs/LOCAL_STUDIO.md)
 - [Browser- und Testnachweis](docs/VERIFICATION_0.2.md)

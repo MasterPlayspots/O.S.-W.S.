@@ -2,9 +2,11 @@
 
 Stand 17.11.2026. Der aktuelle Auftrag legt die Produktentwicklung fest. Bestehende Server, Tunnel, DNS, Passwörter und private Repositories werden dadurch nicht automatisch migriert oder veröffentlicht.
 
+Konkrete Schritt-für-Schritt-Anleitung: [INSTALLATION.md](INSTALLATION.md). Agentenauftrag und Datei-/API-Zuordnung: [AGENT_HANDOFF.md](AGENT_HANDOFF.md).
+
 ## Heute ausführbar
 
-Der CLI-Kern läuft nach dem Klonen mit einer bereits vorhandenen Node-Version >=20. `npm install` ist nicht nötig. `npm start` öffnet den lokalen Einzelplatz-Server mit interaktivem Studio. `npm run demo` erzeugt weiterhin eine statische Vorschau. `inspect --root ...` liest nur das ausgewählte Projekt. Ausgabeordner sind neu; vorhandene Pläne werden nicht überschrieben. Rücknahme: ausschließlich den erzeugten Ausgabeordner entfernen. Keine Systeminstallation und kein Autostart.
+Der CLI-Kern deklariert technisch Node >=20. Für neue Installationen Node 24 LTS mit aktuellem Patchstand verwenden; Node 20 ist EOL. `npm install` ist nicht nötig. `npm start` öffnet den lokalen Einzelplatz-Server mit interaktivem Studio. `npm run demo` erzeugt weiterhin eine statische Vorschau. `inspect --root ...` liest nur das ausgewählte Projekt. Ausgabeordner sind neu; vorhandene Pläne werden nicht überschrieben. Rücknahme: ausschließlich den erzeugten Ausgabeordner entfernen. Keine Systeminstallation und kein Autostart.
 
 ## Ausbaufolge
 

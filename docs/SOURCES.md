@@ -22,3 +22,13 @@ Eine Garantie maximaler Produktivität ist keine belegte Eigenschaft. Die Zielfu
 | [GitHub: Rate limits](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api) | Anonyme Abrufe unterliegen Limits; Cache und manuelle Aktualisierung, Fehlerzustand statt erfundener Daten |
 | `src/github.mjs`, `src/server.mjs`, `src/store.mjs`, `web/` | Tatsächlich implementierter Leser, lokale API, Profile und Oberfläche |
 | `docs/VERIFICATION_0.2.md`, `test/studio.test.mjs` | Echte API-/Browser-Beobachtungen und automatisierte Fehler-/Isolationsprüfungen |
+
+## Installation und Übergabe · 17.11.2026
+
+| Quelle | Entscheidung / Nachweis |
+|---|---|
+| [Node.js Releases](https://nodejs.org/en/about/previous-releases) | Node 24 weiterhin LTS, Node 20 EOL; technische Mindestangabe nicht als Installationsempfehlung behandeln |
+| [Node.js Download](https://nodejs.org/en/download) | Offizielle Quelle für die unterstützte 24er-Reihe mit aktuellem Patchstand |
+| [Git für macOS](https://git-scm.com/install/mac) | Git bei Bedarf über den dokumentierten Weg, etwa Apples Command Line Tools |
+| GitHub Git-Refs/-Tree-API für `10f02c4ef6bae9b593e0c3ee3d1ffc5c92723874` | Alle 27 bisherigen Repo-Dateien lesend bestätigt; private Altbestände fehlen in diesem öffentlichen Stand |
+| `src/server.mjs`, `src/store.mjs`, `examples/preferences.json` | Sitzungs-, Profil- und Vorschauvertrag des Agentenbeispiels gegen Implementierung abgeglichen |

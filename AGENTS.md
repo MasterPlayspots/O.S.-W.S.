@@ -1,6 +1,6 @@
 # Arbeit an diesem Kern
 
-Zuerst STATE und README lesen. Tatsächliche Implementierung, synthetische Daten, deklarierte Verbindungen und geplante Ausführung unterscheiden. Keine LLM-/MCP-/Gerätefunktion behaupten, die nicht angeschlossen und getestet ist.
+Zuerst STATE und README lesen. Für Installation und Integrationen zusätzlich `docs/INSTALLATION.md`, `docs/AGENT_HANDOFF.md` und `docs/INTEGRATION_MATRIX.md` lesen. Tatsächliche Implementierung, synthetische Daten, deklarierte Verbindungen und geplante Ausführung unterscheiden. Keine LLM-/MCP-/Gerätefunktion behaupten, die nicht angeschlossen und getestet ist.
 
 - Nur dieses neu erstellte öffentliche Projekt bearbeiten. Private Cockpit-Historie, Infrastrukturdetails und Laufzeitdaten nicht hineinkopieren.
 - Vor Schreibaktionen Umfang und Rücknahme prüfen. Lokale Entwicklung/Tests und ausdrücklich beauftragte Änderungen fortsetzen; Server-/DNS-/Tunnel-/Deploy-Aktionen benötigen einen eigenen Auftrag.
