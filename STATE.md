@@ -50,3 +50,7 @@ Privat/Geschäftlich trennt Profile und Quellenbindungen, aber keine Betriebssys
 ## Reversibilität und Betrieb
 
 Quelländerung durch Revert des 0.2-Commits rücknehmbar. Profile bleiben lokal unter `.local/profiles/`; ein Revert löscht sie nicht. Entwürfe vor Verwerfen als JSON exportierbar. Der Vorschauprozess wird mit Strg+C beendet, ohne Dienste zu installieren. Kein Serverdeploy, kein DNS-/Tunnel-/Access-Eingriff, kein Merge in das alte Cockpit-Repo und keine Nutzung von Mac-Credentials.
+
+## Remote-Nachweis 0.2
+
+Am 17.11.2026 auf `main` veröffentlicht: Implementierungscommit `2cf1b2a333181e67413f0cb6e99c3e5d5df4e87a`. Anschließender anonymer Git-Fetch erfolgreich; `git diff --exit-code` und `git status --short` waren leer. Die GitHub-Refs-API bestätigte denselben HEAD. Dieser Nachweis folgt als reiner Dokumentationscommit; keine erneute Codeänderung oder Ausführung.
