@@ -1,6 +1,6 @@
 # Geführtes Aufsetzen
 
-Zielablauf, 17.11.2026. In 0.1 liegen die Antworten noch in einer JSON-Datei; der interaktive Fragebogen wird als nächste Oberfläche ergänzt.
+Stand 17.11.2026. In 0.2 sind Fokus, Quellen und Gefühl als drei interaktive Schritte verfügbar. Prioritäten, Pins, Sichtlimit, Glas, Tiefe, Bewegung und Kontext werden lokal mit Revisionen gespeichert. Ein öffentlicher GitHub-Leser ist angeschlossen. Die folgende Tabelle beschreibt den umfassenderen Zielablauf; freie Zielformulierung, Konten, Ausführungsmandate und produktive Aufgaben fehlen noch.
 
 | Schritt | Frage / Entscheidung | Ergebnis |
 |---|---|---|
@@ -18,4 +18,4 @@ Anmeldung, Bezahlung, Freigaben und Datenschutzentscheidungen werden dort abgefr
 
 Im Fokusmodus bleiben angeheftete DOTS und ihre Positionen erhalten. Eingehende Nachrichten können gesammelt werden. Dringlichkeit muss aus einer vom Nutzer festgelegten Regel stammen; ein fremder Nachrichtentext kann sich nicht selbst Systempriorität geben.
 
-Freiheit der Gestaltung bleibt erhalten: automatisch erzeugte Boards sind Ausgangspunkte. Nutzer können Zeit, Form, Farbe, Ebene, Rotation, Größe, Raster, Material und Verhalten verändern. Diese vollständige DOTS-Bedienung ist ein Integrationsziel; 0.1 liefert Auswahl und View-Plan.
+Freiheit der Gestaltung bleibt erhalten: automatisch erzeugte Boards sind Ausgangspunkte. Nutzer können Zeit, Form, Farbe, Ebene, Rotation, Größe, Raster, Material und Verhalten verändern. Diese vollständige DOTS-Bedienung ist ein Integrationsziel; 0.2 liefert Auswahl, Live-Vorschau, Speicherung, Glas und Tiefe; noch keine freie Form-, Zeit- oder Verhaltensbearbeitung.

@@ -4,15 +4,15 @@ Stand 17.11.2026. Der aktuelle Auftrag legt die Produktentwicklung fest. Bestehe
 
 ## Heute ausführbar
 
-Der CLI-Kern läuft nach dem Klonen mit einer bereits vorhandenen Node-Version >=20. `npm install` ist nicht nötig. `npm run demo` erzeugt eine lokale Vorschau. `inspect --root ...` liest nur das ausgewählte Projekt. Ausgabeordner sind neu; vorhandene Pläne werden nicht überschrieben. Rücknahme: ausschließlich den erzeugten Ausgabeordner entfernen. Keine Systeminstallation und kein Autostart.
+Der CLI-Kern läuft nach dem Klonen mit einer bereits vorhandenen Node-Version >=20. `npm install` ist nicht nötig. `npm start` öffnet den lokalen Einzelplatz-Server mit interaktivem Studio. `npm run demo` erzeugt weiterhin eine statische Vorschau. `inspect --root ...` liest nur das ausgewählte Projekt. Ausgabeordner sind neu; vorhandene Pläne werden nicht überschrieben. Rücknahme: ausschließlich den erzeugten Ausgabeordner entfernen. Keine Systeminstallation und kein Autostart.
 
 ## Ausbaufolge
 
 | Phase | Lieferumfang | Abnahme |
 |---|---|---|
 | 0 · Planungskern | Inventar, Ziele, Graph, Layoutplan, Lückenaufträge | 15 lokale Tests, kein externer Effekt, Quellen/Status sichtbar |
-| 1 · Geführter Start | Interaktiver Fragebogen, Vorschau, Speicherung mit Revisionen | Onboarding ohne Konnektor möglich; Nutzer kann Prioritäten/Pins korrigieren und zurücknehmen |
-| 2 · Ein echter Leser | Ein freigegebener Projekt-/Task-/Kalenderadapter | Aktuelle Daten, Rechte und Widerruf; Timeout-/Leer-/Fehlerzustände |
+| 1 · Geführter Start (0.2 umgesetzt) | Interaktiver Fragebogen, Vorschau, Speicherung mit Revisionen | Onboarding ohne Konnektor möglich; Nutzer kann Prioritäten/Pins korrigieren und zurücknehmen |
+| 2 · Ein echter Leser (0.2: öffentliches GitHub) | Öffentliche Projektmetadaten; private Konto-/Task-/Kalenderadapter noch offen | Aktuelle Daten, Rechte und Widerruf; Timeout-/Leer-/Fehlerzustände |
 | 3 · Modellanschluss | Ein echter Planungs-Runner, nachvollziehbare Ereignisse | Modellvorschläge durch denselben Validator; Usage und Budget erfasst; kein erfundener Erfolg |
 | 4 · Lokale Anwendung | Plan an bestehenden Workspace-State und DOTS anbinden | Revision/409-Konflikt, Scopegrenzen, Undo, Desktop/Mobile getrennt |
 | 5 · Konnektorwerkstatt | Kandidatensuche, API-Vertrag, isolierter Test, Review-Patch | Keine ungeprüfte automatische Installation; fehlende Fähigkeit erzeugt prüfbaren Auftrag |

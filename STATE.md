@@ -1,41 +1,52 @@
-# STATE · Adaptive Bootstrap
+# STATE · Adaptive Studio
 
-Stand 17.11.2026 · Version 0.1.
+Stand 17.11.2026 · Version 0.2. Fortsetzung des öffentlichen Bootstrap-Kerns.
 
 ## Produktziel
 
-Freigegebene Systemwerte, Dienste und Meta-Ebenen erkennen; Nutzerziele geführt aufnehmen; einen anpassbaren Arbeitsplatz vorschlagen; fehlende Konnektoren als konkrete Arbeit behandeln; später innerhalb verifizierter Mandate eigenständig planen und handeln.
+Freigegebene Werte und Quellen auf Meta-Ebene einordnen, den Nutzer geführt zu einem passenden Arbeitsplatz bringen und später fehlende Verbindungen selbständig innerhalb verifizierter Mandate bearbeiten. Das Produkt beginnt auf Makroebene und hält Layout, Daten, Regeln und Ausführung getrennt.
 
-## Tatsächlich implementiert
+## Neu umgesetzt
 
-- Strikt validierte Inventar-/Präferenz-Eingaben mit Projekt-/Scope-Abgleich.
-- Kleiner Projekt-/Service-/DOT-Graph, explizite Prioritäten, Pins, sichtbares Limit, getrennte Desktop-/Mobile-Pläne.
-- Aktualität von Beobachtungen, fehlende Fähigkeit und fehlende Anmeldung getrennt.
-- Anschlussaufträge mit MCP-/API-/manuellem Fallback als Planung.
-- Lokaler Inspektor für ein ausgewähltes `package.json`; nur aggregierte Struktur, begrenzte Lesegröße, keine Symlinks auf die Datei, keine Kommandos/Env-/Netzwerkzugriffe.
-- CLI erzeugt JSON-Plan und eigenständige schwarze HTML-Vorschau in einem neuen lokalen Ordner; vorhandene Ausgabe wird nicht überschrieben.
-- Geschlossener Aktionskatalog ohne Ausführungsfunktion.
+- Drei bedienbare Onboarding-Schritte: Fokus, Quellen, Gefühl.
+- Arbeitsbereiche und Prioritäten, Pins, ein bis sechs sichtbare Elemente; begründetes Desktop-Raster und separate Mobile-Stapelvorschau.
+- Schwarze Glasoptik mit Glas-/Tiefenreglern, optionaler dezenter Mausneigung und Beachtung reduzierter Bewegung.
+- Lokaler Node-HTTP-Server, ausschließlich Loopback; Host-/Origin-Prüfung und prozessgebundene Sitzung für API-Zugriff.
+- Gespeicherte Profile je Projekt und Privat-/Geschäftlich-Kontext, Basisrevision und 409-Konflikt, atomare Ersetzung und exklusiver Writer-Lock.
+- JSON-Export des aktuellen Entwurfs; tatsächliche GitHub-Metadaten nicht in Profilen persistiert.
+- Ein echter, explizit ausgelöster öffentlicher GitHub-GET: Quelle, Zeitpunkt, 15-Minuten-Aktualität, begrenzte Antwortgröße, Timeout, keine Redirects oder Credentials.
+- Anschlussaufgaben für weiterhin fehlende Fähigkeiten; kein gefälschter Live-Status.
 
-## Verifikation
+Der vorhandene CLI-Planer und ausgewählte `package.json`-Inspektor bleiben nutzbar. Der Kern hat keine zusätzlichen Paketabhängigkeiten.
 
-`npm test`: **15/15 bestanden**, Node v24.22.1. `npm run demo`: drei sichtbare Elemente, vier Anschlussaufgaben, null externe Aktionen. `inspect --root . --project demo-project --scope business`: lokale Projektstruktur erkannt, null Dependencies, keine Kommandos ausgeführt. Keine echte Browser-/Geräteabnahme; Renderer nur strukturell und auf sichere Textbehandlung getestet.
+## Abnahme dieses Inkrements
 
-## Noch nicht implementiert
+- [x] 26/26 Tests bestanden, Node v24.22.1.
+- [x] Tatsächlicher öffentlicher GitHub-Abruf im Adapter und in der Oberfläche erfolgreich.
+- [x] Browser: Ziele/Pins, Regler, Revision 1 → Reload → Revision 2, Scope-Wechsel, Desktop-/Mobile-Schalter.
+- [x] Ungültige Pin-/Sichtlimit-Kombination wird abgelehnt.
+- [x] Veraltete Beobachtungen, Speicher-Konflikte, Fremd-Origins, Host-Rebinding, unbekannte Felder und Netzfehler geprüft.
+- [x] Lokale Profile und Laufzeitdateien von Veröffentlichung ausgeschlossen; 27 Quell-/Dokumentationsdateien ohne Treffer der geprüften Secret-Muster (kein vollständiger Audit).
+- [x] Temporären Browser-Vorschauprozess beendet.
 
-Interaktiver Onboarding-Fragebogen, echte MCP-/API-Verbindungen, Registry-Suche, OAuth, LLM, Hintergrundschleife, Datenbank, serverseitige Policy, Installation, Adapter-Codegenerierung, Container, messbare Produktivitätsoptimierung und Integration der bisherigen DOTS-Dummys. Diese Funktionen sind als Zielablauf dokumentiert. Der Inspektor ist keine automatische Erkennung aller Apps oder Accounts eines Mac.
+Einzelheiten und Grenzen: `docs/VERIFICATION_0.2.md`. API und Speichervertrag: `docs/LOCAL_STUDIO.md`.
 
-## Veröffentlichung und Herkunft
+## Noch offen
 
-Ziel ist das vom Nutzer angelegte öffentliche Repository `MasterPlayspots/O.S.-W.S.`. Dieses Inkrement enthält nur neu erstellten Code und synthetische Beispiele. Die vorherige private Cockpit-Historie bleibt separat gesichert und wird nicht durch diese Erstversion als öffentlich importiert ausgegeben. Kein Serverdeploy und keine Betriebssysteminstallation.
+Kein LLM/Modell-Runner, MCP-Server/Registry-Sucher, OAuth, Hintergrund-Agent, autonomer Executor, Kalender-/Chatanschluss, echter Benachrichtigungsdienst, DB-/Ontologie-Engine, Container oder universeller DOTS-Editor. Keine iPhone-/Gyroskop-/Safari-Abnahme. Keine vollständige Zustands-Historie, keine JSON-Importoberfläche. Desktop/Mobile sind Visualisierungsvarianten desselben Plans, noch keine unabhängig editierbaren vollständigen Oberflächen.
 
-## Reversibilität
+Privat/Geschäftlich trennt Profile und Quellenbindungen, aber keine Betriebssystemnutzer oder Rechte. Der lokale Sitzungsmechanismus ersetzt keine Multiuser-Authentifizierung. Der reine Planerzähler `externalActionsExecuted: 0` zählt nicht den separaten expliziten öffentlichen HTTP-Lesezugriff.
 
-Lokale Erstellung: neuer Projektordner; keine Altdateien verändert. CLI-Ausgabe: neuer lokaler Ordner, durch Entfernen rücknehmbar. Repository-Commit: ausschließlich diese neuen Dateien; mit Revert rücknehmbar. Öffentliche Git-Historie kann nach einer Veröffentlichung von Dritten kopiert sein; deshalb keine privaten Bestandsdateien übernehmen.
+## Nächste konkrete Welle
 
-## Nächster Umsetzungsschritt
+1. Modell-Runner mit einem freigegebenen Provider, strukturiertem Ausgabeformat, Token-/Kostenlimit und Ereignisprotokoll. Vorschläge durch denselben Validator schicken; keine freie Codeausführung.
+2. Freies Arbeitsziel und bestätigte Regeln auf das vorhandene Profil abbilden. Regelbasierte Planung als verlässlichen Offline-Pfad erhalten.
+3. Erst danach einen konkreten fehlenden Konnektor als isolierten, testbaren Adapterentwurf vorbereiten. Rechte und externe Aktionen getrennt umsetzen; bestehende Infrastruktur erst bei eigenem Auftrag.
 
-Den Fragebogen und den Planer an eine echte lokale Vorschau mit versioniertem Projektzustand anbinden. Danach genau einen lesenden Adapter anschließen. Erst wenn Daten und Rechte nachweisbar stimmen, Modellplanung und begrenzte Ausführung ergänzen. Detaillierte Abnahme: `docs/INSTALLATION_PLAN.md`.
+## Herkunft und Veröffentlichung
 
-## Verifizierter Remote-Stand
+Öffentliches Ziel: `MasterPlayspots/O.S.-W.S.`. Geprüfter Ausgangs-HEAD: `45e06ffa668da49478a552d0cb68b081607d4bd0`. Version 0.1 wurde in `a9dcf5fbfd271b71b66ad7562d401329ac495443` implementiert. Dieses Inkrement erweitert ausschließlich den neuen öffentlichen Code; keine private Cockpit-Historie, Infrastrukturdatei oder personenbezogene Laufzeitdaten wurden übernommen.
 
-Am 17.11.2026 wurden diese 17 neuen Dateien nach `MasterPlayspots/O.S.-W.S.` geschrieben. Der Implementierungscommit ist `a9dcf5fbfd271b71b66ad7562d401329ac495443`. Ein anschließender anonymer Git-Fetch war erfolgreich; der Vergleich der lokalen Dateien mit diesem Remote-Stand war leer. Diese Statusaktualisierung folgt als eigener Commit. Kein Serverdeploy, keine echte Konnektorinstallation und kein Import der privaten Cockpit-Historie.
+## Reversibilität und Betrieb
+
+Quelländerung durch Revert des 0.2-Commits rücknehmbar. Profile bleiben lokal unter `.local/profiles/`; ein Revert löscht sie nicht. Entwürfe vor Verwerfen als JSON exportierbar. Der Vorschauprozess wird mit Strg+C beendet, ohne Dienste zu installieren. Kein Serverdeploy, kein DNS-/Tunnel-/Access-Eingriff, kein Merge in das alte Cockpit-Repo und keine Nutzung von Mac-Credentials.

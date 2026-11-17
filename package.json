@@ -1,13 +1,17 @@
 {
   "name": "os-ws-bootstrap",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=20" },
-  "description": "Local, deterministic bootstrap planner for an adaptive workspace. No model, external connector or executor is connected.",
+  "engines": {
+    "node": ">=20"
+  },
+  "description": "Local adaptive workspace with guided onboarding, revisioned profiles and explicit public GitHub metadata reads. No LLM or external write executor.",
   "scripts": {
     "test": "node --test",
     "demo": "node bin/oa.mjs plan --inventory examples/inventory.json --preferences examples/preferences.json",
-    "inspect": "node bin/oa.mjs inspect"
+    "inspect": "node bin/oa.mjs inspect",
+    "start": "node bin/studio.mjs",
+    "dev": "node bin/studio.mjs"
   }
 }

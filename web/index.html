@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="oa-session" content="__SESSION__">
+  <title>O.A. · Dein Arbeitsplatz</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a href="/" class="brand" aria-label="O.A. Start">O<span>·</span>A</a><div class="wordmark">WORKSPACES <small>ADAPTIVE STUDIO / 0.2</small></div><span class="local-badge"><i></i> LOKALER ARBEITSPLATZ</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">DEIN SYSTEM. DEIN RHYTHMUS.</p><h1>Raum für das,<br><span>was jetzt zählt.</span></h1><p>Du bestimmst den Fokus. Dein Board nimmt Form an.</p></section>
+    <div class="studio">
+      <aside class="setup glass" aria-label="Arbeitsplatz einrichten">
+        <div class="section-head"><span class="eyebrow">01 / EINRICHTEN</span><span id="revision">Nicht gespeichert</span></div>
+        <div class="context"><label for="project">Projekt-ID<input id="project" value="my-workspace" maxlength="80" autocomplete="off"></label><label for="scope">Kontext<select id="scope"><option value="business">Geschäftlich</option><option value="private">Privat</option></select></label><button id="load" class="subtle">Profil laden / neu beginnen</button><small id="active-context">Aktiv: my-workspace · Geschäftlich</small><small>Wechselt das Profil und verwirft den ungespeicherten Entwurf. Kontexte sind getrennte lokale Profile, keine Benutzerkonten.</small></div>
+        <nav class="steps" aria-label="Einrichtungsschritte"><button data-step="0" aria-current="step">1 <span>Fokus</span></button><button data-step="1">2 <span>Quellen</span></button><button data-step="2">3 <span>Gefühl</span></button></nav>
+        <form id="setup-form">
+          <fieldset data-panel="0"><legend>Was brauchst du gerade?</legend><p class="muted">Wähle deine Bereiche. Priorität ordnet sie; ein Pin hält sie im sichtbaren Board.</p><div id="goals"></div></fieldset>
+          <fieldset data-panel="1" hidden><legend>Ein echter Blick aufs Projekt.</legend><p class="muted">Ein öffentliches GitHub-Repo, ausdrücklich von dir ausgewählt. Ein Klick liest nur seine Metadaten.</p><label>GitHub · owner/name<input id="repository" value="MasterPlayspots/O.S.-W.S." spellcheck="false" autocomplete="off"></label><div class="button-row"><button type="button" id="connect" class="primary">Quelle jetzt lesen ↗</button><button type="button" id="disconnect" class="subtle">Quelle lösen</button></div><p id="source-status" class="notice">Noch kein Abruf. Keine Zugangsdaten erforderlich.</p><p class="muted">Keine Inhalte, Commits oder privaten Repos. Weitere Dienste erscheinen als offene Anschlussaufgaben. Es wird nichts installiert.</p></fieldset>
+          <fieldset data-panel="2" hidden><legend>Weniger Reize. Mehr Klarheit.</legend><label class="range-label">Sichtbare Elemente <output id="limit-value">3</output><input id="limit" type="range" min="1" max="6" value="3"></label><label>Benachrichtigungspräferenz<select id="notifications"><option value="quiet">Ruhig · keine Unterbrechungen</option><option value="digest">Später als Zusammenfassung</option></select></label><p class="muted">Als Präferenz gespeichert. Es läuft noch kein Benachrichtigungsdienst.</p><label class="range-label">Glas <output id="glass-value">65</output><input id="glass" type="range" min="0" max="100" value="65"></label><label class="range-label">Tiefe <output id="depth-value">35</output><input id="depth" type="range" min="0" max="100" value="35"></label><label class="check"><input id="motion" type="checkbox" checked> Bewegung reduzieren</label><p class="muted">Schwarz, Licht und Transparenz. Tiefe verändert die Schatten; ohne Bewegungsreduktion neigen sich Karten sanft beim Zeigen.</p></fieldset>
+        </form>
+        <div class="step-footer"><button id="back" class="subtle">← Zurück</button><span id="step-label">1 / 3</span><button id="next" class="subtle">Weiter →</button></div>
+        <div class="save-row"><button id="save" class="primary">Arbeitsplatz speichern</button><button id="export" class="subtle" title="Aktuellen Entwurf als JSON herunterladen">JSON ↓</button></div><p id="feedback" role="status" aria-live="polite">Dein Entwurf wird lokal vorbereitet.</p>
+      </aside>
+      <section class="preview" aria-label="Live-Vorschau">
+        <div class="preview-top"><div><p class="eyebrow">02 / DEIN BOARD</p><h2 id="board-title">Mein Fokus.</h2></div><div class="view-switch" role="group" aria-label="Ansicht"><button id="desktop" aria-pressed="true">Desktop</button><button id="mobile" aria-pressed="false">Mobile</button></div></div>
+        <div class="board-shell"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div id="board" class="board"></div><div id="empty" hidden>Bitte prüfe deine Einstellungen.</div></div>
+        <div class="board-bottom"><span id="plan-summary"></span><span>DEIN FOKUS BLEIBT ANGEHEFTET</span></div>
+        <details class="drawer glass"><summary><span>Weitere Bereiche</span><span id="drawer-count">0</span></summary><div id="drawer-content"></div></details>
+        <details class="drawer glass"><summary><span>Verbindungen & nächste Schritte</span><span id="gap-count">0</span></summary><div id="gaps"></div></details>
+        <div class="method"><span class="method-icon">✧</span><p><strong>Nach deinen Angaben zusammengestellt.</strong><br>Regelbasierte Vorschau · kein angeschlossenes KI-Modell · keine externen Schreibaktionen. Änderungen bleiben ein Entwurf, bis du speicherst.</p></div>
+      </section>
+    </div>
+  </main>
+  <footer>O.A. / WORKSPACES <span>Makro → Fokus → Detail</span><span>Deine Daten bleiben in diesem lokalen Profil.</span></footer>
+</body></html>

@@ -1,6 +1,6 @@
 # Eigenständig planen und handeln
 
-Stand 17.11.2026. **0.1 führt keine externen Aktionen aus und nutzt kein LLM.** Es erzeugt deterministische Pläne und Anschlussaufgaben. Die folgenden Ausführungsstufen sind der Implementierungsvertrag für spätere Versionen.
+Stand 17.11.2026. **0.2 liest auf ausdrücklichen Klick öffentliche GitHub-Metadaten, führt keine externen Schreibaktionen aus und nutzt kein LLM.** Es erzeugt deterministische Pläne und Anschlussaufgaben. Die folgenden Ausführungsstufen sind der Implementierungsvertrag für spätere Versionen.
 
 ## Autonomiestufen
 
@@ -31,7 +31,7 @@ Für jeden Schritt werden Aktion, Quelle, Ergebnis und Revision protokolliert. W
 7. Zugang/Installation in einem konkreten, überprüfbaren Schritt einrichten. Danach Fähigkeiten erneut prüfen und die Verbindung im Projektgraphen aktivieren.
 8. Das Dashboard ergänzt nur die nun tatsächlich verfügbaren Elemente. Alle übrigen Aufgaben laufen mit vorhandenen Fähigkeiten weiter.
 
-**In 0.1 werden diese Schritte als Arbeitsauftrag ausgegeben.** Es gibt noch keinen automatischen Registry-Client, Adapter-Codegenerator, Paketinstaller oder OAuth-Flow.
+**In 0.2 werden diese Schritte weiterhin als Arbeitsauftrag ausgegeben.** Es gibt noch keinen automatischen Registry-Client, Adapter-Codegenerator, Paketinstaller oder OAuth-Flow.
 
 ## Laufzeitvertrag eines Konnektors
 

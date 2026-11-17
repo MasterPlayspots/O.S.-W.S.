@@ -20,23 +20,23 @@ flowchart TD
 
 ## Meta-Ebenen
 
-| Ebene | Inhalt | Reifegrad in 0.1 |
+| Ebene | Inhalt | Reifegrad in 0.2 |
 |---|---|---|
-| Identität und Kontext | Nutzer, privat/geschäftlich, Projekt, Ressourcengrenzen | Projekt-/Scope-Abgleich in Eingaben; keine Serverauthentifizierung |
-| Beobachtungen | Quelle, Zeitpunkt, Gültigkeit, Datenart, Umfang, Unsicherheit | Deklarierte Fähigkeiten mit Zeitfenster; lokale Projektmetadaten |
+| Identität und Kontext | Nutzer, privat/geschäftlich, Projekt, Ressourcengrenzen | Getrennte lokale Profile und Sitzungsprüfung; keine Benutzeranmeldung |
+| Beobachtungen | Quelle, Zeitpunkt, Gültigkeit, Datenart, Umfang, Unsicherheit | Zeitfenster; lokaler Inspektor und echter öffentlicher GitHub-Snapshot |
 | Ontologie | Ziele, Aufgaben, Dienste, Daten, Beziehungen, Herkunft | Kleiner erzeugter Projekt-/Service-/DOT-Graph; keine Datenbank |
 | Entscheidungsmodell | Nutzerpriorität, Aktualität, Eignung, Aufwand, Unterbrechungskosten | Deterministische Prioritäten-/Pin-/Sichtbarkeitsregeln |
 | Policy | Welche Aktion an welcher Ressource innerhalb welcher Grenze? | Geschlossener Aktionskatalog ohne Executor |
-| Komposition | Makro-/Detailansicht, Auswahl der DOTS, Desktop vs. Mobile | Plan mit Grid-/Stack-Views |
-| Gestaltung | Form, Farbe, Glas, Tiefe, Zeit, Material, Motion | Parameter im Plan; einfacher schwarzer Renderer |
-| Ausführung | Verbindung, Abfrage, Datei/Task-Aktion, Agentenarbeit | Noch nicht implementiert |
+| Komposition | Makro-/Detailansicht, Auswahl der DOTS, Desktop vs. Mobile | Bedienbare Vorschau mit Raster-/Stapel-Views und Revisionen |
+| Gestaltung | Form, Farbe, Glas, Tiefe, Zeit, Material, Motion | Glas-/Tiefenregler, optionale Mausneigung und Bewegungsreduktion |
+| Ausführung | Verbindung, Abfrage, Datei/Task-Aktion, Agentenarbeit | Expliziter öffentlicher GitHub-GET; kein autonomer Executor |
 | Bewertung | Nutzerkorrektur, Ergebnisqualität, Fokus und Unterbrechungen | Journal im Plan; keine laufende Messung |
 
 ## Was „das System erkennen“ bedeutet
 
 Entdeckung ist eine Reihe kleiner, erklärbarer Adapter: ausgewähltes Projekt → bekannte Dienste → vom Konto freigegebene Ressourcen → Datenprofile → Fähigkeiten. Das System darf aus einer gefundenen SDK-Abhängigkeit nicht auf ein angemeldetes Konto schließen. Ein Tokenname ist kein Recht. Ein Diagramm darf nicht Werte erfinden, wenn die Quelle fehlt.
 
-Der erste Inspektor liest nur ein ausdrücklich angegebenes `package.json` und liefert Zählwerte sowie Modultyp. Spätere Adapter benötigen jeweils eigenen Scope, Herkunft und Aktualitätsnachweis. Aus Rohdaten werden möglichst Profile/Aggregate: Schema, Menge, Frequenz, Verfügbarkeit und Relevanz. Private Inhalte gelangen nicht automatisch an ein Modell.
+Der erste Inspektor liest nur ein ausdrücklich angegebenes `package.json` und liefert Zählwerte sowie Modultyp. Der neue GitHub-Leser fragt zusätzlich auf ausdrücklichen Klick öffentliche Metadaten eines benannten Repos ab. Spätere Adapter benötigen jeweils eigenen Scope, Herkunft und Aktualitätsnachweis. Aus Rohdaten werden möglichst Profile/Aggregate: Schema, Menge, Frequenz, Verfügbarkeit und Relevanz. Private Inhalte gelangen nicht automatisch an ein Modell.
 
 ## Dashboard-Komposition
 
