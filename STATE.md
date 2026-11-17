@@ -30,8 +30,12 @@ Ziel ist das vom Nutzer angelegte öffentliche Repository `MasterPlayspots/O.S.-
 
 ## Reversibilität
 
-Lokale Erstellung: neuer Projektordner; keine Altdateien verändert. CLI-Ausgabe: neuer lokaler Ordner, durch Entfernen rücknehmbar. Geplanter Repository-Commit: ausschließlich diese neuen Dateien; mit Revert rücknehmbar. Öffentliche Git-Historie kann nach einer Veröffentlichung von Dritten kopiert sein; deshalb keine privaten Bestandsdateien übernehmen.
+Lokale Erstellung: neuer Projektordner; keine Altdateien verändert. CLI-Ausgabe: neuer lokaler Ordner, durch Entfernen rücknehmbar. Repository-Commit: ausschließlich diese neuen Dateien; mit Revert rücknehmbar. Öffentliche Git-Historie kann nach einer Veröffentlichung von Dritten kopiert sein; deshalb keine privaten Bestandsdateien übernehmen.
 
 ## Nächster Umsetzungsschritt
 
 Den Fragebogen und den Planer an eine echte lokale Vorschau mit versioniertem Projektzustand anbinden. Danach genau einen lesenden Adapter anschließen. Erst wenn Daten und Rechte nachweisbar stimmen, Modellplanung und begrenzte Ausführung ergänzen. Detaillierte Abnahme: `docs/INSTALLATION_PLAN.md`.
+
+## Verifizierter Remote-Stand
+
+Am 17.11.2026 wurden diese 17 neuen Dateien nach `MasterPlayspots/O.S.-W.S.` geschrieben. Der Implementierungscommit ist `a9dcf5fbfd271b71b66ad7562d401329ac495443`. Ein anschließender anonymer Git-Fetch war erfolgreich; der Vergleich der lokalen Dateien mit diesem Remote-Stand war leer. Diese Statusaktualisierung folgt als eigener Commit. Kein Serverdeploy, keine echte Konnektorinstallation und kein Import der privaten Cockpit-Historie.
