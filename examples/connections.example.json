@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "connections": [
+    {
+      "id": "project-memory",
+      "label": "Projekt-Memory · Beispiel",
+      "purpose": "Synthetische Beispiele für Produktentscheidungen und Abläufe. Lokale Datei, nur lesend.",
+      "type": "memory-json",
+      "project": {"id": "workspace-core", "scope": "business"},
+      "path": "memory.example.json",
+      "freshForSeconds": 300
+    }
+  ]
+}

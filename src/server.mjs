@@ -1,4 +1,5 @@
 import {createWorkspaceApi} from './workspace/routes.mjs';
+import {loadBrand} from './brand.mjs';
 import {createServer} from 'node:http';
 import {readFile} from 'node:fs/promises';
 import {randomBytes} from 'node:crypto';
@@ -12,8 +13,8 @@ for (const [url,file,type] of [
  ['/workspace.js','workspace.js','text/javascript'],
  ['/workspace.css','workspace.css','text/css'],
  ['/tokens.css','tokens.css','text/css'],
- ['/brand/uniforce-header-original.svg','brand/uniforce-header-original.svg','image/svg+xml'],
- ...['contracts','window-manager','panes','event-client','ui'].map(n=>['/modules/'+n+'.js','modules/'+n+'.js','text/javascript'])
+ ['/brand/oaos-mark.svg','brand/oaos-mark.svg','image/svg+xml'],
+ ...['contracts','window-manager','panes','event-client','ui','brand','integrations'].map(n=>['/modules/'+n+'.js','modules/'+n+'.js','text/javascript'])
 ]) assets.set(url,[file,type+'; charset=utf-8']);
 function fields(value,allowed) {
   if(!value||typeof value!=='object'||Array.isArray(value)||Object.keys(value).some(k=>!allowed.includes(k))) throw new Error('Ungültige Anfragefelder.');
@@ -26,10 +27,10 @@ async function jsonBody(req,limit=32768) {
 }
 
 /** Loopback-only single-user development app, not a multi-user authentication service. */
-export async function startApp({port=4317,dataDir='.local/profiles',reader=readPublicRepository,now=Date.now,projectRoot=null,allowFileWrite=false,enableCodexPlanner=false,repoProject}={}) {
+export async function startApp({port=4317,dataDir='.local/profiles',reader=readPublicRepository,now=Date.now,projectRoot=null,allowFileWrite=false,enableCodexPlanner=false,repoProject,brandConfig=null,connectionsConfig=null}={}) {
   if(!Number.isInteger(port)||port<0||port>65535) throw new Error('Ungültiger Port.');
-  const store=await openStore(dataDir),session=randomBytes(32).toString('hex');
-  let workspace;try{workspace=await createWorkspaceApi({dataDir,projectRoot,allowFileWrite,enableCodexPlanner,repoProject});}catch(e){await store.close();throw e;}
+  const brand=await loadBrand(brandConfig),store=await openStore(dataDir),session=randomBytes(32).toString('hex');
+  let workspace;try{workspace=await createWorkspaceApi({dataDir,projectRoot,allowFileWrite,enableCodexPlanner,repoProject,connectionsConfig,now});}catch(e){await store.close();throw e;}
   const sources=new Map(),attempts=new Map();let requestsInFlight=0,origin;
   const sourceKey=(project,name)=>projectKey(project)+':'+name.toLowerCase();
   function result(profile) {
@@ -51,6 +52,7 @@ export async function startApp({port=4317,dataDir='.local/profiles',reader=readP
         res.writeHead(200,{'Content-Type':type});return res.end(content);
       }
       if(req.headers['x-oa-session']!==session) return send(403,{error:'Lokale Sitzung fehlt. App neu laden.'});
+      if(req.method==='GET'&&url.pathname==='/api/brand')return send(200,brand);
       if(req.method==='GET'&&await workspace.handle({req,res,url,send}))return;
       if(req.method==='GET'&&url.pathname==='/api/profile') {
         const project={id:url.searchParams.get('project'),scope:url.searchParams.get('scope')};

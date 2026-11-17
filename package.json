@@ -1,18 +1,24 @@
 {
-  "name": "os-ws-bootstrap",
-  "version": "0.3.0",
+  "name": "oa-os",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=20"
+    "node": ">=24"
   },
-  "description": "UNIFORCE local AI workspace: six panes, scoped layouts, read-only runtime bridge, usage ledger and optional Codex layout proposals.",
+  "description": "O.A. - O.S by ourark.io: a free, local-first white-label workspace for code, sessions, usage, connections and memory.",
   "scripts": {
     "test": "node --test",
     "demo": "node bin/oa.mjs plan --inventory examples/inventory.json --preferences examples/preferences.json",
     "inspect": "node bin/oa.mjs inspect",
     "start": "node bin/studio.mjs",
-    "dev": "node bin/studio.mjs",
+    "dev": "node bin/studio.mjs --connections-config examples/connections.example.json",
     "bridge": "node bin/bridge.mjs"
+  },
+  "license": "MIT",
+  "homepage": "https://ourark.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MasterPlayspots/O.S.-W.S..git"
   }
 }

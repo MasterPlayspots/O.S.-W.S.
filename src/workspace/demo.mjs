@@ -1,7 +1,7 @@
 import {clone} from '../../web/modules/contracts.js';
 const rect=(x,y,w=4,h=4)=>({x,y,w,h});
 const window=(id,kind,title,taskId,sessionId,fileId,x,y)=>({id,kind,title,taskId,sessionId,fileId,pinned:false,minimized:false,closed:false,rect:rect(x,y),mobileOrder:y*3+x/4,level:kind==='code'?0:1});
-export function defaultLayout(){return {schemaVersion:1,theme:'uniforce',pages:[
+export function defaultLayout(){return {schemaVersion:1,theme:'oaos',pages:[
  {id:'workspace',title:'Arbeitsplatz',windows:[
  window('code-frontend','code','Frontend · Arbeitsfläche','layout','frontend','demo:frontend',0,0),
  window('code-backend','code','Backend · Ereignisse','events','backend','demo:backend',4,0),

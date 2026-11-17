@@ -1,3 +1,5 @@
+> Historische Implementierungsnotiz (vor O.A. - O.S 0.4). Für den aktuellen Produktstand gelten README.md, STATE.md und docs/INSTALLATION.md. Frühere Markenassets sind nicht Teil der aktuellen Auslieferung.
+
 # Ein Arbeitsplatz, der sich begründet zusammensetzt
 
 Produktentscheidung vom 17.11.2026. Diese Datei beschreibt die Zielarchitektur. Der tatsächliche Stand ist `STATE.md`.

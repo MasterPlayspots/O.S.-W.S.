@@ -1,66 +1,155 @@
-# UNIFORCE · AI Workspace
+# O.A. - O.S
 
-**Version 0.3 · 17.11.2026 · lokal lauffähiger Entwicklungsstand.** Der bestehende O.A.-Kern wurde um den UNIFORCE-Arbeitsplatz aus dem Handoff erweitert. Node/Vanilla-ESM bleibt erhalten; keine neuen Paketabhängigkeiten.
+**Your tools. One workspace.** A free, open-source, white-label dashboard by [ourark.io](https://ourark.io).
 
-Drei Code- und drei Sessionfenster, persönliche Seiten, Fensterkontext, Usage, gespeicherte Zustände und ein Layout-Assistent bilden den Arbeitsplatz. Die erste Ansicht enthält klar bezeichnete synthetische Beispieldaten. **Kein Produktionsdeploy und keine aktive Verbindung zu einer Firmen-Datenbank.**
+Bring code, agent-session metadata, project progress, token usage and your own memory into one personal workspace. Start locally, make it yours, then connect sources one at a time.
 
-## Start
+**v0.4.0 · MIT · Node.js 24+ · Zero npm dependencies · Local single-user application**
 
-Node ≥ 20 und Git im PATH. Im Checkout:
+![O.A. - O.S with three code windows and three clearly marked demo sessions](docs/screenshots/dashboard.jpg)
+
+This is a working, extensible local product release. Screenshots use **synthetic demo sessions and usage**, alongside an explicitly read local repository. They do not show live Claude, Codex or Gemini agents executing through the dashboard. No cloud account or API key is required for the core application.
+
+## Start in three commands
+
+Install [Node.js 24 LTS or later](https://nodejs.org/en/download) and Git:
 
 ```sh
-npm test
+git clone https://github.com/MasterPlayspots/O.S.-W.S..git oa-os
+cd oa-os
 npm start
 ```
 
-`http://127.0.0.1:4317/` auf demselben Rechner öffnen. Andere Ports: `npm start -- --port 4318`. Keine Paketinstallation erforderlich. Beenden: Strg+C. Bisheriges Onboarding: `/setup`; CLI `bin/oa.mjs` und `/api/profile`, `/api/preview`, `/api/github` bleiben verfügbar.
+Open **http://127.0.0.1:4317/**. No `npm install`, database or build step. Stop with Ctrl+C. The double dot before `git` is intentional: the repository name ends in a dot.
 
-Für den ausdrücklich ausgewählten Arbeitsbestand:
+1. Explore the labeled demonstration and save a layout.
+2. Open **Verbindungen** and explicitly read the selected local repository.
+3. Switch to **Verbundene Quellen** for imported metadata.
+4. Connect your own memory using the instructions below.
+
+For a developer demo with configured synthetic memory, run `npm run dev`, then **Verbindungen → Verbindung prüfen → Memory öffnen**. The fixture is only read after your click. The UI is currently German; this README and campaign captions are English.
+
+## Why use it?
+
+| Your problem | What the dashboard provides |
+|---|---|
+| Code, agents and context live in different places | Multiple code/session windows with shared project context and an inspector |
+| An agent name does not reveal which model ran | Separate runtime, requested/effective model, source and quality fields |
+| Token totals can be misleading | Request/attempt IDs, cumulative snapshot handling, unknown values preserved, costs separated by currency and quality |
+| “Connected” is often only a configuration flag | Explicit checks, timestamps, expiry and readable failure states |
+| Decisions disappear between sessions | JSON-memory connection, text search, source references, hashes and context-package export |
+| Clients need different branding | Configurable name, monogram, tagline, website, accent and dark/light theme |
+| Prototypes are hard to continue | Small dependency-free modules, examples, tests and contribution guides |
+
+These are functional benefits, not measured productivity or cost-saving claims.
+
+## Included today
+
+- **Workspace:** six initial windows, three pages, add/duplicate/pin/minimize/close, desktop drag/resize, responsive layouts and project/private-business separation.
+- **Code:** native editable text panes and local drafts. Applying a draft to an explicitly selected Git repository requires startup opt-in and a matching base hash. No shell or embedded IDE server.
+- **Sessions and usage:** structured metadata imports, task progress, model identity when reported, token coverage and cost-quality separation.
+- **Assistance:** deterministic layout proposals, plus an optional host-installed Codex CLI planner. Suggestions are reviewed and applied deliberately.
+- **Automations:** versioned, previewed, manually triggered one-step local review/report drafts with idempotent events.
+- **Time:** last 40 saved revisions, read-only replay and deliberate layout restoration.
+- **Space:** CSS 2.5D overview. Three.js/WebGL and full external-session replay are roadmap items.
+- **Connections and memory:** functioning local JSON adapter and connection dashboard.
+
+## Know what is connected
+
+![Connection Center after explicit local repo and synthetic memory checks](docs/screenshots/connections.jpg)
+
+**Green:** successful local check within the stated validity period. **Red:** failed check. **Amber:** unverified or stale. **Gray:** disabled, unavailable, waiting or missing. Labels accompany color. Reopen the view to refresh status; a successful check is not continuous monitoring or verification of source content.
+
+An available bridge is not a running agent. Imports remain labeled as imports. Calendar, Drive, Slack/Teams, MCP and vector-store connectors are not bundled.
+
+## Connect your memory
+
+![Read-only memory with synthetic entries, provenance and context export](docs/screenshots/memory.jpg)
 
 ```sh
-npm start -- --project-root /ABSOLUTER/PROJEKTPFAD --data-dir /PRIVATER/PFAD/workspace-state
+npm start -- --connections-config examples/connections.example.json
 ```
 
-Das Repo wird erst nach **Verbindungen → Repo jetzt lesen** gelesen. Der Adapter ist an `workspace-core/business` gebunden; andere Projekt-/Privatkontexte erhalten dessen Dateien nicht. „Verbundene Quellen“ zeigt importierte Metadaten, keine Demo-Agenten. Dateiinhalte öffnen erst nach Auswahl im Fenster.
+Open **Verbindungen**, check **Projekt-Memory · Beispiel**, then open **Memory**. Search title/content/tags and export an entry with source and SHA-256 hashes.
 
-## Was funktioniert
+For your own data, copy both connection and memory examples to a private directory, update path/project/scope, and pass the connection file to `--connections-config`. Paths resolve relative to that file. Do not commit personal memory.
 
-- UNIFORCE-Farben und lokal gespeichertes Originallogo; lizenzierte Schriftassets sind nicht beigefügt, System-/Serif-Fallbacks greifen.
-- Sechs stabile Fensterinstanzen; Verschieben und Größenänderung im breiten Raster, Pin, Minimieren, Maximieren, Duplizieren, Schließen/Wiederöffnen. Seitenauswahl und Fensterliste für Mobile. Eigenständige mobile Reihenfolge, Desktop-Geometrie bleibt erhalten.
-- Code-/Notizentwürfe speichern, Seiten anlegen/umbenennen, Fenster zwischen Seiten verschieben, Undo für 40 Layoutschritte. Dateidropdown und eigener Sessionkontext pro Fenster.
-- Projekt-/Scope-Speicher mit Writer-Lock, atomaren Dateien und Revisionen. Konflikt 409 behält den Entwurf; „Stand prüfen“ erlaubt eine bewusste neue Basis.
-- Letzte 40 Snapshots und ein nur lesender Verlauf. Wiederherstellung betrifft ausschließlich das Layout. Fehlende historische Dateiversionen werden nicht durch aktuellen Code ersetzt.
-- Lesender Repo-Adapter und normalisierte lokale Event-Bridge. Cursor-SSE, Wiederholungserkennung und strenge Streamsequenzen.
-- Usage-Ledger mit Snapshotersetzung, expliziten Deltas, finalen Korrekturen, unbekannten Werten statt Null und getrennten Kostenwährungen/Herkünften.
-- Regelbasierte Layoutvorschläge mit Vorschau/Übernahme/Speichern. Optionaler Codex-CLI-Adapter für strukturierte Vorschläge, standardmäßig aus.
-- Geprüfte Aktivierung lokaler Ein-Schritt-Abläufe. Manuell geliefertes Ereignis erzeugt einen privaten Review-/Berichtsentwurf; keine Nachricht, kein Deployment, kein Teststart.
-- Optionale CSS-2.5D-Übersicht; produktive Bearbeitung in 2D, Reduced Motion und Pausenschalter.
+This is **read-only local JSON**, not automatic RAG, vector search, training or implicit model-context injection. Existing knowledge systems can export this schema as a first integration step. [Exact schema and guide →](docs/MEMORY.md)
 
-## Modellanschluss
+## Make it your brand
 
 ```sh
-npm start -- --enable-codex-planner
+npm start -- --brand-config examples/brand.example.json
 ```
 
-Nur auf einem Arbeits-Host mit eigener funktionsfähiger Codex-Anmeldung. Kein Tokenimport. Der Adapter überprüft benötigte CLI-Funktionsschalter, deaktiviert Werkzeuge/Unteragenten/Websuche und liefert ausschließlich einen begrenzten Layoutvorschlag. Ein Lauf maximal 60 Sekunden, keine parallelen Läufe, 10 Sekunden Mindestabstand. Das ist **kein finanzieller Kosten-Cap**. Vor einem Aufruf werden nur das eingegebene Layoutziel und Fenster-IDs/Typen/Pins übergeben, keine Codeinhalte.
+The sample enables a light theme with green accent. Edit a private copy:
 
-**Verifikationsgrenze 17.11.:** Codex CLI `0.167.0-alpha.4` und bestehende Anmeldung erkannt. Der echte Vorschlagslauf scheiterte hier beim internen App-Server-Start an `Read-only file system (os error 30)`. Deshalb kein erfolgreicher Modellanschluss behauptet. Die Vertrags-/Timeouttests verwenden eine ausdrücklich synthetische CLI. Erfolgreiche spätere Modellläufe erfassen nur tatsächlich gemeldete Usage; nicht gemeldetes Modell und Geldkosten bleiben unbekannt.
+```json
+{
+  "schemaVersion": 1,
+  "name": "Your Workspace",
+  "tagline": "Your work. Your context.",
+  "monogram": "YW",
+  "website": "https://example.com",
+  "theme": "light",
+  "accent": "#17685D"
+}
+```
 
-## Anschluss und Übergabe
+Supported themes: `dark`/`light`; accent: six-digit hex; website: public HTTPS. The header uses the monogram. A custom SVG favicon/logo requires an asset change; there is no arbitrary upload or executable branding plugin. [White-label guide →](docs/WHITE_LABEL.md)
 
-- [Installation für Claude Code / Codex](docs/UNIFORCE_INSTALL.md)
-- [Architektur und Datenverträge](docs/WORKSPACE_ARCHITECTURE.md)
-- [Lokale Runtime-Bridge](docs/RUNTIME_BRIDGE.md)
-- [Prüfstand und offene Abnahme](docs/UNIFORCE_ACCEPTANCE.md)
-- [Aktueller Entwicklungsstand](STATE.md)
-- [Integrationsmatrix](docs/INTEGRATION_MATRIX.md)
+## Add sources gradually
 
-## Betriebsgrenzen
+| Source | Available path | Boundary |
+|---|---|---|
+| Local Git | Explicit read; optional hash-checked file write | Selected root; no commit/push executor |
+| CLI agents | Explicit JSONL metadata import | No transcript scraping or terminal control |
+| Memory | Configured local JSON | Read/search/export; no source writes or model injection |
+| Public GitHub | Explicit metadata read in `/setup` | Anonymous repository metadata only |
+| Codex advice | Host-installed CLI and startup opt-in | Layout suggestions; runtime/account compatibility required |
+| Calendar, Drive, MCP, vector DB, external workflows | Documented extension path | Implementation and authorization still required |
 
-Die App bindet nur an `127.0.0.1` und prüft Host, Origin und lokalen Sitzungskopf. Sie ist **ein lokaler Einzelplatz**, keine Anmeldung, VM, Mandantentrennung oder Sandbox für beliebigen Code. Zugriff auf denselben Rechner ist nicht durch die Privat-/Geschäftlich-Auswahl abgesichert. Kein öffentlicher Tunnel zu diesem Prozess.
+Start with [INTEGRATIONS.md](docs/INTEGRATIONS.md), [RUNTIME_BRIDGE.md](docs/RUNTIME_BRIDGE.md) and `examples/`. Credentials stay outside the browser and repo. Imported metadata cannot grant execution rights.
 
-Persönliche Layouts, Entwürfe, importierte Metadaten und Snapshots liegen standardmäßig in `.local/profiles/`, vollständig von Git ausgeschlossen. Kein Betriebssystem-/Home-Scanner. Keine privaten Cockpit-Archive oder internen Arbeitsunterlagen im öffentlichen Repo. Wichtige private Zustände vor einem Update separat sichern; atomare Ersetzung ersetzt keine Backupstrategie.
+## Develop and contribute
 
-Optionales `--allow-file-write` erlaubt bewusst bestätigte Änderungen an ausgewählten, bereits verfolgten Textdateien im angegebenen Repo. Basis-Hash muss passen, es erfolgt kein Commit. Nur in eigenem Worktree verwenden: Die Hashprüfung ersetzt keine Sperre gegen unabhängige externe Dateischreiber.
+```sh
+npm test
+npm run dev
+```
 
-Noch offen: produktiver Controls/A12-Vertrag und Zugriff, echte Claude-/Gemini-/Codex-Sessionsteuerung, PTY/Terminal, Benchmark-Läufe, Kalender/Kommunikation/Meet, vollständige Tabgruppen und Split-Semantik, Monaco/xterm/Three.js, echtes iPhone/Safari und Mehrbenutzerbetrieb. Die vorhandene CSS-Tiefe ist kein Three.js-Renderer.
+**54 tests passed** for v0.4 on Node.js 24.22.1/Linux. [Verification scope →](docs/VERIFICATION_0.4.md). No npm dependencies. `private: true` in `package.json` prevents accidental npm publication; it does **not** make GitHub private.
+
+| Directory | Responsibility |
+|---|---|
+| `web/` | UI, themes, windows and browser views |
+| `src/workspace/` | Scoped state, revision history and API |
+| `src/integrations/` | Registry and JSON-memory contract |
+| `src/model/` | Usage accounting and optional planner |
+| `src/automations/` | Closed catalog of local draft actions |
+| `examples/` | Synthetic inputs/configs |
+| `docs/` | Setup, product report, screenshots and extension guides |
+| `.claude/agents/` | Four marketing role definitions |
+
+Contributions are welcome: adapters, tests, accessibility, localization, docs and UI. See [CONTRIBUTING.md](CONTRIBUTING.md), [ROADMAP.md](docs/ROADMAP.md) and [AGENTS.md](AGENTS.md).
+
+## Operating boundary
+
+The app binds to **127.0.0.1**, with a local session and Host/Origin checks. It is a **single-user local application**, not hosted multi-tenant SaaS. A Linux server can serve an authorized operator through SSH forwarding; [installation guide](docs/INSTALLATION.md). Public/team operation needs separate authentication, authorization, TLS, tenant isolation, audit and deployment work.
+
+The dashboard code is free. Optional model calls, subscriptions, hardware and hosting may cost money. The core UI loads no analytics or remote fonts. [Security and data handling →](SECURITY.md)
+
+## Product and launch material
+
+- [Vollständiger Produktbericht (Deutsch)](docs/PRODUCT_REPORT_DE.md)
+- [Install, update, back up and roll back](docs/INSTALLATION.md)
+- [30-day TikTok / Instagram / X / YouTube Shorts plan](docs/marketing/30_DAY_PLAN.md)
+- [Claude Code marketing handoff](docs/marketing/CLAUDE_CODE_HANDOFF.md)
+- [CSV calendar](docs/marketing/calendar.csv) · [JSON calendar](docs/marketing/calendar.json)
+- [Screenshots and capture notes](docs/screenshots/README.md)
+
+The campaign contains **30 scripts/shot lists and 120 channel-specific drafts**. Video production and social publication remain assigned to Claude Code with the necessary account access. These files do not schedule or publish automatically.
+
+## License and identity
+
+Own code and original documentation are [MIT licensed](LICENSE). **O.A. - O.S belongs to ourark.io**. White-label use and further development are welcome while preserving the license notice. Brand/trademark rights do not imply endorsement. Earlier third-party branded assets are removed from the current distribution; historical commits retain their context. [Attribution notes →](NOTICE.md)

@@ -1,3 +1,5 @@
+> Historische Implementierungsnotiz (vor O.A. - O.S 0.4). Für den aktuellen Produktstand gelten README.md, STATE.md und docs/INSTALLATION.md. Frühere Markenassets sind nicht Teil der aktuellen Auslieferung.
+
 # Geführtes Aufsetzen
 
 Stand 17.11.2026. In 0.2 sind Fokus, Quellen und Gefühl als drei interaktive Schritte verfügbar. Prioritäten, Pins, Sichtlimit, Glas, Tiefe, Bewegung und Kontext werden lokal mit Revisionen gespeichert. Ein öffentlicher GitHub-Leser ist angeschlossen. Die folgende Tabelle beschreibt den umfassenderen Zielablauf; freie Zielformulierung, Konten, Ausführungsmandate und produktive Aufgaben fehlen noch.

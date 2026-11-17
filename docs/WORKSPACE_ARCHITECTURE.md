@@ -1,3 +1,5 @@
+> Historische Implementierungsnotiz (vor O.A. - O.S 0.4). Für den aktuellen Produktstand gelten README.md, STATE.md und docs/INSTALLATION.md. Frühere Markenassets sind nicht Teil der aktuellen Auslieferung.
+
 # Arbeitsplatzkern 0.3
 
 Stand: 17.11.2026. Bisheriger Node-/Vanilla-ESM-Kern bleibt erhalten. Keine neuen Laufzeitabhängigkeiten.

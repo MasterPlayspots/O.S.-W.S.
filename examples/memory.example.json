@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {"id":"product-direction","title":"Eine Oberfläche. Dein Arbeitskontext.","content":"Synthetisches Beispiel: Code, Sessions, Verbrauch und Projektwissen sollen in einem persönlichen Workspace zusammenkommen. Die führenden Werkzeuge behalten ihre Daten und Rechte. Neue Adapter werden einzeln angeschlossen und geprüft.","source":"example:synthetic/product-brief","updatedAt":"2026-11-17T10:00:00Z","tags":["Produkt","Entscheidung","Workspace"]},
+    {"id":"review-workflow","title":"Vom Code zum nachvollziehbaren Review","content":"Synthetisches Beispiel: Aufgabe auswählen, Code-Entwurf prüfen, Session-Metadaten ansehen, lokalen Review-Entwurf vorbereiten und die Entscheidung im führenden System treffen. Ein grüner Verbindungsstatus ersetzt keine fachliche Freigabe.","source":"example:synthetic/workflows/review","updatedAt":"2026-11-17T10:00:00Z","tags":["Workflow","Review","Freigabe"]},
+    {"id":"memory-contract","title":"Memory mit Herkunft statt blindem Kontext","content":"Synthetisches Beispiel: Einträge tragen ID, Inhalt, Quelle, Zeitstempel und Tags. O.A. - O.S liest die ausdrücklich gebundene Datei, zeigt Integrität und Frische und exportiert ein Kontextpaket. Modellkontext wird nicht automatisch ergänzt.","source":"example:synthetic/architecture/memory","updatedAt":"2026-11-17T10:00:00Z","tags":["Memory","Integration","Herkunft"]},
+    {"id":"brand-choice","title":"White-Label ohne eigenen Fork für die Farben","content":"Synthetisches Beispiel: Name, Monogramm, Link, Akzentfarbe und helles oder dunkles Theme kommen aus einer JSON-Konfiguration. Das eigene Logo kann im Quellcode ersetzt werden. Kundendaten und Verbindungskonfiguration gehören in einen privaten Ordner.","source":"example:synthetic/brand/decision","updatedAt":"2026-11-17T10:00:00Z","tags":["White-Label","Design","Onboarding"]}
+  ]
+}

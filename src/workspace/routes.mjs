@@ -8,7 +8,9 @@ import {previewAutomation,validateAutomation,executeLocalAutomation} from '../au
 import {createRepoReader} from '../adapters/local-repo.mjs';
 import {createCodexPlanner} from '../model/codex-planner.mjs';
 import {ConflictError,projectKey} from '../store.mjs';
-export async function createWorkspaceApi({dataDir,projectRoot=null,allowFileWrite=false,enableCodexPlanner=false,repoProject={id:'workspace-core',scope:'business'}}){
+import {openRegistry} from '../integrations/registry.mjs';
+export async function createWorkspaceApi({dataDir,projectRoot=null,allowFileWrite=false,enableCodexPlanner=false,repoProject={id:'workspace-core',scope:'business'},connectionsConfig=null,now=Date.now}){
+ const registry=await openRegistry({configFile:connectionsConfig,now});
  const store=await openWorkspaceStore(join(dataDir,'workspaces')),reader=projectRoot?await createRepoReader(projectRoot,{allowWrite:allowFileWrite}):null;
  const planner=createCodexPlanner({enabled:enableCodexPlanner});const streams=new Set(),previews=new Map();let planningProject=null;
  const digest=a=>createHash('sha256').update(JSON.stringify(a)).digest('hex');
@@ -23,16 +25,21 @@ export async function createWorkspaceApi({dataDir,projectRoot=null,allowFileWrit
    history:s.history.map(h=>({id:h.id,revision:h.revision,at:h.at})),
    automations:s.automations,runs:s.runs,reports:s.reports,
    capabilities:{localOnly:true,fileWrite:repoAllowed(p)&&allowFileWrite,sessionControl:false,externalAutomations:false},
-   sourceGaps:['Controls/A12: kein freigegebener Adapter eingerichtet','Kalender und Kommunikation: nicht verbunden']};
+   sourceGaps:['Externe Sessionsteuerung: kein ausführender Adapter eingerichtet','Kalender und Kommunikation: nicht verbunden']};
  }
  async function handle({req,res,url,input,send}){
-  const path=url.pathname;if(!['/api/workspace','/api/workspace/layout','/api/files/content','/api/files/draft','/api/files/apply','/api/local/read','/api/connections','/api/events','/api/events/ingest','/api/usage','/api/history','/api/assistant/propose','/api/assistant/cancel','/api/automation/preview','/api/automation/save','/api/automation/activate','/api/automation/run','/api/session/command'].includes(path))return false;
+  const path=url.pathname;if(!['/api/workspace','/api/workspace/layout','/api/files/content','/api/files/draft','/api/files/apply','/api/local/read','/api/connections','/api/connections/check','/api/memory','/api/memory/item','/api/events','/api/events/ingest','/api/usage','/api/history','/api/assistant/propose','/api/assistant/cancel','/api/automation/preview','/api/automation/save','/api/automation/activate','/api/automation/run','/api/session/command'].includes(path))return false;
   let project;
   if(req.method==='GET')project=parseProject(url);
   else {project=context(input?.project);}
   const m=mode(url);
   if(req.method==='GET'&&path==='/api/workspace'){send(200,summary(await store.read(project),project,m));return true;}
-  if(req.method==='GET'&&path==='/api/connections'){send(200,{planner:await planner.status(),repoConfigured:!!reader&&repoAllowed(project),runtimeBridge:{state:'ready',capabilities:['session.metadata.ingest','usage.ingest','task.ingest'],localOnly:true},controls:{state:'missing',reason:'Verifizierter Controls-Vertrag und Leserechte fehlen.'}});return true;}
+  if(req.method==='GET'&&path==='/api/connections'){
+   const s=await store.read(project),repo=repoAllowed(project)?reader?.getSnapshot():null;
+   send(200,{planner:await planner.status(),repoConfigured:!!reader&&repoAllowed(project),repo:repo?{branch:repo.branch,observedAt:repo.observedAt,fileCount:repo.files.length}:null,runtimeBridge:{state:s.sessions.length?'imported':'waiting',sessionCount:s.sessions.length,capabilities:['session.metadata.ingest','usage.ingest','task.ingest'],localOnly:true},integrations:registry.list(project)});return true;
+  }
+  if(req.method==='GET'&&path==='/api/memory'){send(200,registry.query(project,{connectionId:url.searchParams.get('connectionId'),q:url.searchParams.get('q')||'',limit:Number(url.searchParams.get('limit')||50)}));return true;}
+  if(req.method==='GET'&&path==='/api/memory/item'){send(200,registry.read(project,url.searchParams.get('connectionId'),url.searchParams.get('itemId')));return true;}
   if(req.method==='GET'&&path==='/api/usage'){
    const s=await store.read(project),from=url.searchParams.get('from'),to=url.searchParams.get('to');
    if([from,to].some(v=>v&&!Number.isFinite(Date.parse(v)))||(from&&to&&Date.parse(from)>Date.parse(to)))throw Error('Ungültiger Zeitraum.');
@@ -67,6 +74,7 @@ export async function createWorkspaceApi({dataDir,projectRoot=null,allowFileWrit
    const close=()=>{clearInterval(beat);unsubscribe();streams.delete(res);};streams.add(res);res.on('close',close);return true;
   }
   if(req.method!=='POST'){send(405,{error:'Methode nicht erlaubt.'});return true;}
+  if(path==='/api/connections/check'){fields(input,['project','connectionId']);send(200,await registry.check(input.connectionId,project));return true;}
   if(path==='/api/workspace/layout'){
    fields(input,['project','layout','baseRevision']);send(200,summary(await store.saveLayout(project,input.layout,input.baseRevision),project,m));return true;
   }

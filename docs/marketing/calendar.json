@@ -1,0 +1,1289 @@
+{
+  "product": "O.A. - O.S",
+  "brand": "ourark.io",
+  "preparedAt": "2026-11-17",
+  "launchDate": null,
+  "timezone": "Europe/Berlin",
+  "publicationStatus": "not_scheduled",
+  "days": [
+    {
+      "day": 1,
+      "title": "Meet O.A. - O.S",
+      "hook": "Your work deserves one clear overview.",
+      "claims": [
+        "C01",
+        "C02",
+        "C03"
+      ],
+      "screen": "Startansicht mit sechs Fenstern und sichtbarem Demo-/Datenstatus.",
+      "voice": "This is O.A. - O.S by ourark.io: a free, open-source dashboard you can run locally and adapt to your workflow. Keep project context, working windows and session information in one place. The repository includes the code, setup instructions and the next steps for contributors. Start with the working local release, then connect the parts of your environment you actually use. Your first step is simple: open the README.",
+      "cta": "Open the README and try the local workspace.",
+      "tiktok": "A clearer home for your AI workflow. Meet O.A. - O.S by ourark.io. Free source code, a local workspace and room to build your own setup. Repo in the verified profile link. #OpenSource #BuildInPublic #OurArk",
+      "instagram": "Introducing O.A. - O.S. A free, open-source workspace for people who want project context and AI work in one overview. Save this introduction, then follow the setup in the repository. Link in the verified profile.",
+      "x": "Meet O.A. - O.S by ourark.io: a free, open-source dashboard for project context, working windows and AI session information. Start locally and extend it for your workflow.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Meet O.A. - O.S: your open-source workspace",
+      "goal": "Repo-Besuche und erste nachvollziehbare Setup-Rückmeldungen erfassen; noch keine Zielzahl behaupten.",
+      "youtube_description": "Meet O.A. - O.S — a practical O.A. - O.S walkthrough by ourark.io. Open the README and try the local workspace.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 30,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Your work deserves one clear overview."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Startansicht mit sechs Fenstern und sichtbarem Demo-/Datenstatus.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Open the README and try the local workspace."
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "title": "Six windows, one task",
+      "hook": "Keep the task visible while the tools change.",
+      "claims": [
+        "C03"
+      ],
+      "screen": "Drei Code-/Projektfenster und drei Sessionfenster; eine Taskzuordnung markieren.",
+      "voice": "A project rarely lives in one window. You may need a file, a session, a test result and the task they belong to. O.A. - O.S gives those views a shared workspace. Put the information you need side by side and keep the task context close to the work. This recording uses clearly marked sample data. Try the layout with your own project and tell us which window you would add first.",
+      "cta": "Comment with your first six-window layout.",
+      "tiktok": "What belongs in your six-window workspace? Show us your layout idea. This clip uses labelled sample data. #DeveloperTools #OpenSource #OurArk",
+      "instagram": "A file, a session, a task and its context can share one workspace. Save this layout for your next project and tell us which view you would add.",
+      "x": "A task, its files and the relevant session should be easy to see together. Here is the six-window layout in O.A. - O.S, using labelled demo data. Which view would you add?\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Six windows for one project workflow",
+      "goal": "Verwertbare Layout-Kommentare nach gewünschtem Fenstertyp kategorisieren.",
+      "youtube_description": "Six windows, one task — a practical O.A. - O.S walkthrough by ourark.io. Comment with your first six-window layout.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 31,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Keep the task visible while the tools change."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Drei Code-/Projektfenster und drei Sessionfenster; eine Taskzuordnung markieren.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Comment with your first six-window layout."
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "title": "Pin your focus",
+      "hook": "Your focused window should stay where you put it.",
+      "claims": [
+        "C03"
+      ],
+      "screen": "Fenster bewegen, Größe ändern und Pin aktivieren; geschützte Position demonstrieren.",
+      "voice": "Arrange your workspace around the task in front of you. Move a window, resize it, and pin the view you want to keep stable. The point is to make a useful layout that you can return to. In this demo, the pinned window stays fixed while the surrounding workspace changes. Keep the interaction visible in the recording and test the result before calling it done. What would you pin during a coding session?",
+      "cta": "Try a pinned layout and share the workflow.",
+      "tiktok": "One small detail that matters during work: a stable focus window. Try pinning your main view in O.A. - O.S. #Workflow #DeveloperTools",
+      "instagram": "Build a workspace that respects your focus. Move, resize and pin your main view. Save this interaction and try it in your next local session.",
+      "x": "Today’s O.A. - O.S demo: move, resize and pin a working window. A useful layout should keep your chosen focus stable. What would you pin?\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Pin your focus in O.A. - O.S",
+      "goal": "Speicherungen und konkrete Pin-/Layout-Rückmeldungen zählen.",
+      "youtube_description": "Pin your focus — a practical O.A. - O.S walkthrough by ourark.io. Try a pinned layout and share the workflow.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 32,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Your focused window should stay where you put it."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Fenster bewegen, Größe ändern und Pin aktivieren; geschützte Position demonstrieren.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Try a pinned layout and share the workflow."
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "title": "Model and runtime",
+      "hook": "Which model actually handled that request?",
+      "claims": [
+        "C04"
+      ],
+      "screen": "Session-Detail mit getrennten Feldern Runtime, Provider und gemeldetem Modell; fehlenden Wert zeigen.",
+      "voice": "An agent name and a model name describe different things. The runtime tells you which tool is managing the work. The provider and reported model describe the request behind it. O.A. - O.S keeps these fields separate. When a source does not report the model, the interface should say so. This makes a session easier to understand and a handoff easier to review. Check the source label whenever you inspect a result.",
+      "cta": "Inspect the model and source fields in the demo.",
+      "tiktok": "Runtime, provider, model: three useful fields for understanding AI work. Watch how O.A. - O.S separates them. #AIWorkflow #OpenSource",
+      "instagram": "Which tool ran the session? Which provider handled it? Which model was actually reported? Keep these questions separate. Save this checklist for your AI workspace.",
+      "x": "Runtime, provider and reported model are different fields in O.A. - O.S. Missing data stays visibly unknown. This demo shows the distinction.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Runtime vs model: understand your AI session",
+      "goal": "Qualifizierte Fragen zu Modellherkunft und Adapterdaten erfassen.",
+      "youtube_description": "Model and runtime — a practical O.A. - O.S walkthrough by ourark.io. Inspect the model and source fields in the demo.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 31,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Which model actually handled that request?"
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Session-Detail mit getrennten Feldern Runtime, Provider und gemeldetem Modell; fehlenden Wert zeigen.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Inspect the model and source fields in the demo."
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "title": "Token numbers with context",
+      "hook": "A token number needs a source and a time range.",
+      "claims": [
+        "C04"
+      ],
+      "screen": "Usage-Ansicht mit Zeitraum, Quelle und reported/demo/unavailable-Kennzeichnung.",
+      "voice": "A token total is useful when you know what it measures. Is it one request, one session or the whole project? Was it reported by the provider or shown as demo data? O.A. - O.S makes that context part of the interface. Costs also need a currency and a price basis. Missing usage is shown as unavailable. Use the demo to inspect the fields, then connect a supported event source for your own data.",
+      "cta": "Check the usage data contract in the repository.",
+      "tiktok": "Before comparing token totals, check the source and time range. A quick tour of usage fields in O.A. - O.S. #AITokens #DeveloperTools",
+      "instagram": "Token totals need context: scope, source, timestamp and cost basis. Save this four-point checklist. The video uses clearly labelled demo data.",
+      "x": "A token total needs scope, source and a time range. O.A. - O.S keeps those details visible and distinguishes demo or unavailable data.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "What your token counter should explain",
+      "goal": "Klicks zur Usage-Dokumentation und Rückfragen zur Messdefinition erfassen.",
+      "youtube_description": "Token numbers with context — a practical O.A. - O.S walkthrough by ourark.io. Check the usage data contract in the repository.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 32,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "A token number needs a source and a time range."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Usage-Ansicht mit Zeitraum, Quelle und reported/demo/unavailable-Kennzeichnung.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Check the usage data contract in the repository."
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "title": "Start locally",
+      "hook": "The first useful step is a workspace that starts.",
+      "claims": [
+        "C02"
+      ],
+      "screen": "Saubere lokale Installation anhand der aktuellen README; tatsächliche Befehle und Browserstart.",
+      "voice": "Here is the local starting point for O.A. - O.S. Open the repository, read the requirements, run the documented checks and start the workspace. Follow the commands from the current README rather than a screenshot of an older version. The initial experience does not mean every external service is connected. It gives you a working place to configure and extend. If setup fails, report the command, version and a redacted error so we can improve the path.",
+      "cta": "Follow the current README and report your setup result.",
+      "tiktok": "Local setup walkthrough for O.A. - O.S. Commands come from the current README. Tell us where the first-run experience can improve. #OpenSource #BuildInPublic",
+      "instagram": "Your first O.A. - O.S session starts with the README. Save this setup walkthrough and share your operating system and result—without credentials or private logs.",
+      "x": "Start O.A. - O.S locally using the current README. Run the documented checks, open the workspace and report your setup result with versions and a redacted error if needed.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Start O.A. - O.S locally from the README",
+      "goal": "Erfolgreiche und fehlgeschlagene Erststarts getrennt zählen; häufigsten Setup-Blocker finden.",
+      "youtube_description": "Start locally — a practical O.A. - O.S walkthrough by ourark.io. Follow the current README and report your setup result.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 33,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "The first useful step is a workspace that starts."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Saubere lokale Installation anhand der aktuellen README; tatsächliche Befehle und Browserstart.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Follow the current README and report your setup result."
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "title": "Week one questions",
+      "hook": "What would make this workspace useful for you?",
+      "claims": [
+        "C01",
+        "C03"
+      ],
+      "screen": "Drei echte Kommentare falls vorhanden; sonst klar beschriftete Produktfragen.",
+      "voice": "After the first set of demos, we want to understand your workflow. Which view do you need most often? Which connection would save you a manual step? And what information gets lost when you switch between tools? We are collecting concrete use cases for O.A. - O.S. Show us the sequence of work, not only a product name. If there are no public comments to feature yet, this video presents our questions directly.",
+      "cta": "Describe one workflow in three steps.",
+      "tiktok": "Help shape O.A. - O.S: describe one workflow in three steps and name the missing connection. #BuildInPublic #OpenSource",
+      "instagram": "Three questions for your next workspace: what do you need to see, what needs to connect, and what context gets lost? Leave one concrete workflow below.",
+      "x": "Help shape O.A. - O.S. Describe one workflow in three steps: what starts it, what tools are involved and what result you need. We will turn useful examples into scoped issues.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "What should O.A. - O.S connect next?",
+      "goal": "Mindestens die Anzahl brauchbarer Workflow-Beschreibungen berichten; kein künstliches Kommentarvolumen.",
+      "youtube_description": "Week one questions — a practical O.A. - O.S walkthrough by ourark.io. Describe one workflow in three steps.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 32,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "What would make this workspace useful for you?"
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Drei echte Kommentare falls vorhanden; sonst klar beschriftete Produktfragen.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Describe one workflow in three steps."
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "title": "Make it your brand",
+      "hook": "Your dashboard can look like your product.",
+      "claims": [
+        "C05"
+      ],
+      "screen": "Geprüfte Branding-Konfiguration ändern; vorher/nachher in derselben echten App.",
+      "voice": "O.A. - O.S is designed to be adapted. This demo changes the supported brand settings and shows the same workspace with a different visual identity. Keep the functionality and make the interface fit your project. Use the documented fields for the name, monogram, theme and accent, then check readability at desktop and mobile sizes. The white-label guide explains the limits and the files involved. Start with a small, reversible change.",
+      "cta": "Open the white-label guide and try one brand change.",
+      "tiktok": "Same workspace, your visual identity. A real white-label configuration demo in O.A. - O.S. #WhiteLabel #OpenSource",
+      "instagram": "Make the workspace fit your project. This before-and-after uses the supported branding configuration. Save the demo and follow the white-label guide.",
+      "x": "White-label demo: configure the supported brand settings in O.A. - O.S and keep the same workspace underneath. The guide shows the fields and limits.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "White-label your O.A. - O.S dashboard",
+      "goal": "Aufrufe der Branding-Anleitung und echte Konfigurationsbeispiele erfassen.",
+      "youtube_description": "Make it your brand — a practical O.A. - O.S walkthrough by ourark.io. Open the white-label guide and try one brand change.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 30,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Your dashboard can look like your product."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Geprüfte Branding-Konfiguration ändern; vorher/nachher in derselben echten App.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Open the white-label guide and try one brand change."
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "title": "A reusable client workspace",
+      "hook": "Start the next project with a reusable workspace.",
+      "claims": [
+        "C05",
+        "C11"
+      ],
+      "screen": "Zwei fiktive, deutlich als Beispiele bezeichnete Markenprofile; Lizenzhinweis.",
+      "voice": "If you build tools for clients or internal teams, a reusable base can help you begin with a consistent structure. O.A. - O.S provides an open-source workspace and a documented white-label path. You still configure the actual data sources, permissions and deployment for each environment. This clip uses fictional brands to demonstrate the idea. Read the licence and the branding notes, then decide which part of the base fits your next project.",
+      "cta": "Save the white-label checklist for your next project.",
+      "tiktok": "A reusable dashboard base for your next project. These brands are fictional examples; each real environment still needs its own connections and access setup. #WhiteLabel #OpenSource",
+      "instagram": "A consistent starting point for client or internal tools. Keep the structure, configure the brand, then connect the environment. Save the checklist before your next build.",
+      "x": "O.A. - O.S offers a reusable, white-label workspace base. Each client environment still needs its own data bindings, permissions and deployment. Fictional brand examples shown.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "A reusable workspace base for client projects",
+      "goal": "Relevante Agentur-/Builder-Anwendungsfälle sammeln; keine erfundenen Kundenlogos.",
+      "youtube_description": "A reusable client workspace — a practical O.A. - O.S walkthrough by ourark.io. Save the white-label checklist for your next project.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 31,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Start the next project with a reusable workspace."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Zwei fiktive, deutlich als Beispiele bezeichnete Markenprofile; Lizenzhinweis.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Save the white-label checklist for your next project."
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "title": "See your connections",
+      "hook": "Can you explain every connection in your dashboard?",
+      "claims": [
+        "C06"
+      ],
+      "screen": "Verbindungen: System, Richtung, Adapter, Status, Zeitpunkt und Detailansicht.",
+      "voice": "A connection should be understandable. O.A. - O.S gives it a place in the interface: what system it points to, what role it has, and what the latest check actually established. Open the detail view to see the configured route and its status. A planned adapter and a healthy connection are different states. Start with one verified source and build the map from evidence as the workspace grows.",
+      "cta": "Inspect one connection and its latest check.",
+      "tiktok": "What connects to what—and how do you know it works? A tour of the O.A. - O.S connections view. #AIWorkflow #DeveloperTools",
+      "instagram": "Make connections visible: system, direction, adapter, status and latest check. Save this view as a checklist for your own environment.",
+      "x": "Connection status should explain the target, method and last check. O.A. - O.S separates configured, healthy, failed and unverified states.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "See what your workspace is connected to",
+      "goal": "Kommentare zu fehlenden Verbindungsdetails und Klicks zur Adapterdokumentation erfassen.",
+      "youtube_description": "See your connections — a practical O.A. - O.S walkthrough by ourark.io. Inspect one connection and its latest check.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 30,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Can you explain every connection in your dashboard?"
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Verbindungen: System, Richtung, Adapter, Status, Zeitpunkt und Detailansicht.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Inspect one connection and its latest check."
+        }
+      ]
+    },
+    {
+      "day": 11,
+      "title": "A useful red status",
+      "hook": "A red status is useful when it explains the next step.",
+      "claims": [
+        "C06"
+      ],
+      "screen": "Kontrollierter lokaler Fehler, klarer Fehlergrund; danach echte erfolgreiche Prüfung.",
+      "voice": "Here is a controlled connection failure in a local test. The dashboard shows the failure and the information needed to investigate it. After correcting the test configuration, we run the check again and show the new result. That sequence matters: the status changes because of a new observation. Keep timestamps visible and distinguish an outdated result from a fresh success. A good status view helps you decide what to do next.",
+      "cta": "Try the documented failure case in an isolated demo.",
+      "tiktok": "A useful connection status includes a reason and a timestamp. Watch this controlled failure and recovery in O.A. - O.S. #DeveloperTools #BuildInPublic",
+      "instagram": "A status indicator should help you act. This isolated demo shows failure, correction and a new check. Save the sequence for your integration checklist.",
+      "x": "Controlled failure → useful error → corrected configuration → fresh check. Today’s O.A. - O.S demo shows the evidence behind a connection status.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "A connection status you can actually investigate",
+      "goal": "Fehlerverständlichkeit anhand konkreter Rückmeldungen bewerten; Demo-Ausfall nicht als echter Incident darstellen.",
+      "youtube_description": "A useful red status — a practical O.A. - O.S walkthrough by ourark.io. Try the documented failure case in an isolated demo.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 31,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "A red status is useful when it explains the next step."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Kontrollierter lokaler Fehler, klarer Fehlergrund; danach echte erfolgreiche Prüfung.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Try the documented failure case in an isolated demo."
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "title": "Connect your memory",
+      "hook": "Your project memory should have a clear home.",
+      "claims": [
+        "C07"
+      ],
+      "screen": "Dokumentiertes lokales JSON-Memory-Beispiel anbinden, Eintrag lesen, Quelle zeigen.",
+      "voice": "Project memory can start with a small, explicit source. This release of O.A. - O.S supports a local JSON memory connection for read-only access. Configure the documented source, load the example and inspect the entries in the workspace. Keep the original source and the displayed view clearly linked. This is a concrete starting point for your own knowledge workflow. Additional backends need their own adapters and checks.",
+      "cta": "Connect the documented example memory source.",
+      "tiktok": "Connect a small local JSON memory source to O.A. - O.S. Read-only, explicit and traceable. More backends need their own adapters. #AIMemory #OpenSource",
+      "instagram": "Give project memory a clear source. This walkthrough uses the release’s local JSON memory adapter. Save it, then try the documented example with synthetic data.",
+      "x": "O.A. - O.S memory demo: connect the documented local JSON source and read entries with a clear source reference. Additional backends require adapters.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Connect local project memory to O.A. - O.S",
+      "goal": "Anzahl nachvollziehbarer Memory-Erstanschlüsse und Fehlerberichte erfassen.",
+      "youtube_description": "Connect your memory — a practical O.A. - O.S walkthrough by ourark.io. Connect the documented example memory source.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 29,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Your project memory should have a clear home."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Dokumentiertes lokales JSON-Memory-Beispiel anbinden, Eintrag lesen, Quelle zeigen.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Connect the documented example memory source."
+        }
+      ]
+    },
+    {
+      "day": 13,
+      "title": "Memory with provenance",
+      "hook": "Where did this piece of project context come from?",
+      "claims": [
+        "C07"
+      ],
+      "screen": "Memory-Eintrag öffnen und vorhandene Herkunfts-/Versionsfelder erklären.",
+      "voice": "A memory entry is more useful when you can trace it to its source. Open an entry in O.A. - O.S and inspect the fields the adapter provides. The source reference and available hash help you trace the entry back to the configured file. If a field is unavailable, keep that visible. This demo uses synthetic project notes. Before you rely on a memory result, check its source and scope.",
+      "cta": "Inspect the source of one memory entry.",
+      "tiktok": "Project memory needs provenance. Open an entry, inspect the source, and check the available version or timestamp. Synthetic notes shown. #AIMemory #DeveloperTools",
+      "instagram": "A helpful memory entry answers: where did this come from, what does it belong to, and how current is it? Save this source-checking habit.",
+      "x": "Project memory needs provenance. In O.A. - O.S, inspect the source fields an adapter provides and keep unavailable metadata explicit. Synthetic example shown.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Trace project memory back to its source",
+      "goal": "Rückmeldungen zu benötigten Herkunfts-/Versionsfeldern sammeln.",
+      "youtube_description": "Memory with provenance — a practical O.A. - O.S walkthrough by ourark.io. Inspect the source of one memory entry.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 30,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Where did this piece of project context come from?"
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Memory-Eintrag öffnen und vorhandene Herkunfts-/Versionsfelder erklären.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Inspect the source of one memory entry."
+        }
+      ]
+    },
+    {
+      "day": 14,
+      "title": "Read-only first",
+      "hook": "Start a new memory connection with a simple read.",
+      "claims": [
+        "C07"
+      ],
+      "screen": "Datei vor/nach Lesezugriff vergleichen; keine Schreibaktion suggerieren.",
+      "voice": "The first memory adapter in this release is read-only. That makes the initial workflow easy to inspect: choose the configured source, read an allowed entry and verify what the workspace displays. The original data is not changed by this operation. A future write path needs its own contract, permission model and tests. Start with a small synthetic file and understand the data flow before adding more capabilities.",
+      "cta": "Run the read-only example before connecting real data.",
+      "tiktok": "Start small: one local memory source and a read-only path you can inspect. O.A. - O.S walkthrough. #AIMemory #OpenSource",
+      "instagram": "A clear first connection: configured source → read → inspect the result. The local JSON memory path in this release is read-only. Save the example for later.",
+      "x": "The local JSON memory adapter in this O.A. - O.S release is read-only. Start with synthetic data, verify the source and inspect the result before extending the contract.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Start with a read-only memory connection",
+      "goal": "Korrekte Erwartung an Lese-/Schreibumfang messen; wiederkehrende Missverständnisse dokumentieren.",
+      "youtube_description": "Read-only first — a practical O.A. - O.S walkthrough by ourark.io. Run the read-only example before connecting real data.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 29,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Start a new memory connection with a simple read."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Datei vor/nach Lesezugriff vergleichen; keine Schreibaktion suggerieren.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Run the read-only example before connecting real data."
+        }
+      ]
+    },
+    {
+      "day": 15,
+      "title": "The complete local loop",
+      "hook": "Here is one small workflow from start to finish.",
+      "claims": [
+        "C02",
+        "C03",
+        "C06",
+        "C07"
+      ],
+      "screen": "Lokaler Start → Projektansicht → Verbindung prüfen → Memory-Eintrag lesen.",
+      "voice": "Let us put the pieces together in one local workflow. Start O.A. - O.S from the documented setup, open the project workspace, inspect the configured connection and read a memory entry. Keep the source labels visible throughout. The goal is a clear path from the task to the context it needs. This is a local demo with synthetic content. You can repeat the same steps before adapting the workspace to your environment.",
+      "cta": "Repeat the local walkthrough from the repository.",
+      "tiktok": "One local workflow, start to finish: workspace, connection check, memory entry. Synthetic data throughout. #OpenSource #AIWorkflow",
+      "instagram": "Save this end-to-end local walkthrough. It joins the workspace, connection view and project memory in one repeatable sequence.",
+      "x": "One local O.A. - O.S loop: start → open project → inspect connection → read memory. A repeatable synthetic example before adapting your own environment.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "O.A. - O.S: one complete local workflow",
+      "goal": "Setup-zu-Memory-Abschlussrate nur aus freiwilligen, dokumentierten Rückmeldungen berechnen.",
+      "youtube_description": "The complete local loop — a practical O.A. - O.S walkthrough by ourark.io. Repeat the local walkthrough from the repository.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 31,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Here is one small workflow from start to finish."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Lokaler Start → Projektansicht → Verbindung prüfen → Memory-Eintrag lesen.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Repeat the local walkthrough from the repository."
+        }
+      ]
+    },
+    {
+      "day": 16,
+      "title": "Build the next adapter",
+      "hook": "The next integration starts with a small contract.",
+      "claims": [
+        "C08"
+      ],
+      "screen": "Dokumentierter Adaptervertrag und minimale Beispielantwort; Status der neuen Integration sichtbar.",
+      "voice": "A central interface grows through well-defined connections. The adapter guide in O.A. - O.S explains the shape of an integration: identity, capabilities, data and check results. Start with one narrow read operation and test its failure cases. Then connect the interface to that result. The guide is an extension path, not a claim that every tool is already supported. Bring a real use case and keep the first adapter small.",
+      "cta": "Read the adapter guide and propose one scoped integration.",
+      "tiktok": "Build one small integration first. O.A. - O.S documents the adapter contract so contributors can extend the workspace. #OpenSource #BuildInPublic",
+      "instagram": "A useful integration starts with a clear contract. Save this adapter outline and propose one narrow, testable connection for your workflow.",
+      "x": "Want another connection in O.A. - O.S? Start with a narrow adapter: identity, capabilities, data, checks and failure cases. The extension guide is in the repo.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Build the next O.A. - O.S adapter",
+      "goal": "Issues mit klarer Quelle, Capability und Abnahmekriterium zählen.",
+      "youtube_description": "Build the next adapter — a practical O.A. - O.S walkthrough by ourark.io. Read the adapter guide and propose one scoped integration.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 30,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "The next integration starts with a small contract."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Dokumentierter Adaptervertrag und minimale Beispielantwort; Status der neuen Integration sichtbar.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Read the adapter guide and propose one scoped integration."
+        }
+      ]
+    },
+    {
+      "day": 17,
+      "title": "Keep the source of truth",
+      "hook": "Your dashboard should explain where the data lives.",
+      "claims": [
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "screen": "Quelle und angezeigte Projektion nebeneinander; tatsächliche read-only-Datenrichtung markieren.",
+      "voice": "A dashboard is a view into a system. Keep the original source clear when you add a connection. O.A. - O.S records the connection and displays the information that the adapter provides. In the local memory example, the JSON source remains the original and the workspace shows its entries. This approach makes future integrations easier to reason about: name the owner, the direction and the allowed operations before you add a new view.",
+      "cta": "Document the source of truth for one planned connection.",
+      "tiktok": "Where does the original data live? Make the owner and direction clear before adding a dashboard connection. #AIWorkflow #DeveloperTools",
+      "instagram": "A useful integration has a named source of truth. Save this three-part checklist: data owner, data direction, allowed operations.",
+      "x": "Before adding a dashboard connection, name its source of truth, direction and allowed operations. The local memory example in O.A. - O.S makes that relationship explicit.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Where does your dashboard data actually live?",
+      "goal": "Nützliche Datenflussbeispiele und Fragen zu Quellenbindung erfassen.",
+      "youtube_description": "Keep the source of truth — a practical O.A. - O.S walkthrough by ourark.io. Document the source of truth for one planned connection.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 32,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Your dashboard should explain where the data lives."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Quelle und angezeigte Projektion nebeneinander; tatsächliche read-only-Datenrichtung markieren.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Document the source of truth for one planned connection."
+        }
+      ]
+    },
+    {
+      "day": 18,
+      "title": "Preview an automation",
+      "hook": "See what a workflow would do before it runs.",
+      "claims": [
+        "C09"
+      ],
+      "screen": "Tatsächlich verfügbare Automationsvorschau mit Demo-/Dry-run-Kennzeichnung.",
+      "voice": "A workflow should be understandable before it creates effects. This O.A. - O.S demonstration shows the automation preview available in the release. Inspect the trigger, the conditions and the proposed steps. The clip is labelled as a preview and does not claim an external action has happened. Executing a real workflow needs connected capabilities, suitable permissions and evidence from the runner. Start by making the proposed sequence easy to review.",
+      "cta": "Inspect the preview and propose a small workflow.",
+      "tiktok": "Preview the steps before executing a workflow. This O.A. - O.S clip shows the release’s automation preview, with its mode clearly labelled. #Automation #OpenSource",
+      "instagram": "An automation should explain its trigger, conditions and steps. Save this preview walkthrough and describe one small routine you want to build.",
+      "x": "Today’s O.A. - O.S clip is an automation preview. Real external execution needs connected capabilities and runner evidence. Start by making the sequence easy to inspect.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Preview an automation workflow in O.A. - O.S",
+      "goal": "Vorgeschlagene Routinen nach Trigger, Aktion und benötigtem Anschluss strukturieren.",
+      "youtube_description": "Preview an automation — a practical O.A. - O.S walkthrough by ourark.io. Inspect the preview and propose a small workflow.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 30,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "See what a workflow would do before it runs."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Tatsächlich verfügbare Automationsvorschau mit Demo-/Dry-run-Kennzeichnung.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Inspect the preview and propose a small workflow."
+        }
+      ]
+    },
+    {
+      "day": 19,
+      "title": "Project context above the work",
+      "hook": "Keep the task context close to the window.",
+      "claims": [
+        "C03",
+        "C04"
+      ],
+      "screen": "Fensterkopf: Projekt, Task, Zustand und verfügbare Session-Metadaten.",
+      "voice": "When you move between working windows, the context should remain easy to find. O.A. - O.S places the project and task information close to the view it belongs to. Session metadata is shown when it is available from the source. In this recording, we use labelled sample data to demonstrate the relationship. The useful question is simple: can you tell what this window is for without opening another tool?",
+      "cta": "Suggest the most useful field for a window header.",
+      "tiktok": "Can you tell what a window is working on at a glance? A quick look at project context in O.A. - O.S. Demo data shown. #DeveloperTools #AIWorkflow",
+      "instagram": "Keep the task near the work. This demo shows the project and session context associated with a window. Which header field matters most to you?",
+      "x": "Can you identify a window’s project, task and available session context at a glance? O.A. - O.S puts those details close to the working view. Demo data shown.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Keep project context above each working window",
+      "goal": "Priorisierte Header-Felder aus echten Antworten ableiten.",
+      "youtube_description": "Project context above the work — a practical O.A. - O.S walkthrough by ourark.io. Suggest the most useful field for a window header.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 30,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Keep the task context close to the window."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Fensterkopf: Projekt, Task, Zustand und verfügbare Session-Metadaten.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Suggest the most useful field for a window header."
+        }
+      ]
+    },
+    {
+      "day": 20,
+      "title": "Inspect your project",
+      "hook": "Start with the project you are actually working on.",
+      "claims": [
+        "C02",
+        "C03"
+      ],
+      "screen": "Dokumentierte lokale Projektansicht oder Beispieldateien; Lese-/Editierfähigkeit korrekt beschriften.",
+      "voice": "A useful workspace should connect back to the project you are working on. This demo opens the documented local project view and shows what the current release can inspect. Keep file previews, editable content and runner output clearly distinguished. A visible code panel does not automatically mean a command has executed. Follow the supported local workflow from the README and use the repository issues to propose the next concrete capability.",
+      "cta": "Try the documented local project view.",
+      "tiktok": "A workspace should connect back to your actual project. This demo labels the supported local view clearly. #DeveloperTools #OpenSource",
+      "instagram": "File preview, editing and execution are different capabilities. This O.A. - O.S walkthrough shows the local project view supported by the release.",
+      "x": "A code panel should explain what it can do. Today’s O.A. - O.S demo shows the documented local project view and labels preview versus execution clearly.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Inspect your local project in O.A. - O.S",
+      "goal": "Fragen zu Projektpfaden und Dateifähigkeiten erfassen; keine nicht getestete Editierfunktion bewerben.",
+      "youtube_description": "Inspect your project — a practical O.A. - O.S walkthrough by ourark.io. Try the documented local project view.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 30,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Start with the project you are actually working on."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Dokumentierte lokale Projektansicht oder Beispieldateien; Lese-/Editierfähigkeit korrekt beschriften.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Try the documented local project view."
+        }
+      ]
+    },
+    {
+      "day": 21,
+      "title": "Local and server are different milestones",
+      "hook": "A local demo is the beginning of a deployment plan.",
+      "claims": [
+        "C02",
+        "C10"
+      ],
+      "screen": "README-Betriebsgrenzen und neutraler Plan: Auth, TLS, Persistenz, Backup; kein fingierter Live-Deploy.",
+      "voice": "O.A. - O.S starts with a local workspace. A shared server adds further responsibilities: authentication, access rules, transport security, persistent storage and recovery. The documentation separates those milestones so you can plan the next step honestly. This video shows the checklist, not a production deployment claim. If you are adapting the project for a team, bring the real environment requirements into the deployment work before opening the service to other users.",
+      "cta": "Read the deployment boundaries before planning shared access.",
+      "tiktok": "Local setup and team deployment are different milestones. Here is the O.A. - O.S checklist for the next step. #SelfHosted #OpenSource",
+      "instagram": "Planning a shared deployment? Start with identity, access, transport, persistence and recovery. Save the checklist and read the current operating limits.",
+      "x": "O.A. - O.S starts locally. Shared deployment needs authentication, access rules, transport security, persistence and recovery. The docs separate working features from the next deployment milestones.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Plan shared access beyond the local dashboard",
+      "goal": "Server-Anforderungen aus Interessentenfragen sammeln; keine Produktionsreife versprechen.",
+      "youtube_description": "Local and server are different milestones — a practical O.A. - O.S walkthrough by ourark.io. Read the deployment boundaries before planning shared access.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 31,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "A local demo is the beginning of a deployment plan."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "README-Betriebsgrenzen und neutraler Plan: Auth, TLS, Persistenz, Backup; kein fingierter Live-Deploy.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Read the deployment boundaries before planning shared access."
+        }
+      ]
+    },
+    {
+      "day": 22,
+      "title": "Your first contribution",
+      "hook": "Your first contribution can be a better setup instruction.",
+      "claims": [
+        "C12"
+      ],
+      "screen": "CONTRIBUTING und kleine tatsächliche Dokumentationsänderung in separatem Branch.",
+      "voice": "You do not need to build a new integration to help O.A. - O.S improve. Try the setup on your machine, identify one unclear instruction and propose a focused change. The contribution guide explains the workflow and the checks. Keep examples free of credentials and private project data. A useful issue includes the version, steps and expected result. A small, reproducible improvement makes the next person’s first run easier.",
+      "cta": "Open one reproducible issue or a focused pull request.",
+      "tiktok": "Your first open-source contribution can be one clearer setup instruction. Try O.A. - O.S and tell us what needs improving. #OpenSource #FirstContribution",
+      "instagram": "Start small: test the README, report a reproducible problem, or improve one instruction. Save this as your first-contribution checklist.",
+      "x": "Your first O.A. - O.S contribution can be a clearer setup step. Include version, reproduction steps and expected result, with private data removed.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Make your first O.A. - O.S contribution",
+      "goal": "Reproduzierbare Issues und angenommene kleine PRs getrennt zählen.",
+      "youtube_description": "Your first contribution — a practical O.A. - O.S walkthrough by ourark.io. Open one reproducible issue or a focused pull request.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 30,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Your first contribution can be a better setup instruction."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "CONTRIBUTING und kleine tatsächliche Dokumentationsänderung in separatem Branch.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Open one reproducible issue or a focused pull request."
+        }
+      ]
+    },
+    {
+      "day": 23,
+      "title": "Free code, clear costs",
+      "hook": "Free source code still deserves a clear cost explanation.",
+      "claims": [
+        "C01",
+        "C11"
+      ],
+      "screen": "LICENSE und README-Kostenabschnitt; keine Preiszahlen erfinden.",
+      "voice": "O.A. - O.S is released as free source code under the repository’s licence. You can inspect the project and adapt it within those terms. Running connected services may involve other costs, such as hosting or paid model APIs. Those costs belong to the services you choose and should be visible in your own setup. Read the licence and the cost notes before building on the project. The goal is a clear starting point for contributors and users.",
+      "cta": "Read the licence and cost notes in the repository.",
+      "tiktok": "Free source code. Clear operating costs. Read the O.A. - O.S licence and remember that optional hosting or model APIs may have their own charges. #OpenSource #OurArk",
+      "instagram": "The code is free under the repository licence. Optional hosting and connected APIs can still cost money. Save this distinction before planning your setup.",
+      "x": "O.A. - O.S is free source code under the repo licence. Optional hosting and paid model APIs can have separate costs. The README explains the distinction.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "What “free” means for O.A. - O.S",
+      "goal": "Kostenfragen und Missverständnisse erfassen; Lizenz erst nach veröffentlichter LICENSE behaupten.",
+      "youtube_description": "Free code, clear costs — a practical O.A. - O.S walkthrough by ourark.io. Read the licence and cost notes in the repository.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 33,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Free source code still deserves a clear cost explanation."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "LICENSE und README-Kostenabschnitt; keine Preiszahlen erfinden.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Read the licence and cost notes in the repository."
+        }
+      ]
+    },
+    {
+      "day": 24,
+      "title": "Keep credentials out of demos",
+      "hook": "A good product demo starts with clean sample data.",
+      "claims": [
+        "C10"
+      ],
+      "screen": "Synthetische Beispielkonfiguration und redigierte Logs; niemals echte Tokens zeigen.",
+      "voice": "Before you record or share a workspace, prepare clean sample data. Use fictional project notes, remove credentials and check the source files as well as the screen. O.A. - O.S demonstrations should show what the product does without exposing private environments. A redacted screenshot is useful, but the repository and exported files need review too. Keep secrets in the appropriate private configuration for your environment and use public examples for public demos.",
+      "cta": "Use the synthetic examples for your first public demo.",
+      "tiktok": "Recording your own dashboard demo? Start with synthetic notes and credential-free examples. #BuildInPublic #DeveloperTools",
+      "instagram": "A public demo deserves clean sample data. Check the screen, files and exports before sharing. Save this reminder for your next build-in-public post.",
+      "x": "For your O.A. - O.S demo, use synthetic project data and credential-free examples. Review the repository and exports as well as the visible screen.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Prepare a clean open-source dashboard demo",
+      "goal": "Nutzung der Beispieldaten und sachliche Sicherheitsfragen erfassen; keinen vollständigen Audit behaupten.",
+      "youtube_description": "Keep credentials out of demos — a practical O.A. - O.S walkthrough by ourark.io. Use the synthetic examples for your first public demo.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 31,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "A good product demo starts with clean sample data."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Synthetische Beispielkonfiguration und redigierte Logs; niemals echte Tokens zeigen.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Use the synthetic examples for your first public demo."
+        }
+      ]
+    },
+    {
+      "day": 25,
+      "title": "A handoff someone can use",
+      "hook": "A useful handoff includes the next concrete step.",
+      "claims": [
+        "C03",
+        "C04",
+        "C12"
+      ],
+      "screen": "Tatsächlich vorhandene Projektdokumentation: Ziel, Stand, Belege, Grenzen, nächster Schritt.",
+      "voice": "A project handoff should make the next action clear. Include the goal, the actual state, the relevant files, the checks that ran and what remains open. O.A. - O.S keeps its implementation notes in the repository so contributors can understand the starting point. This clip walks through a real, redacted example from the shipped project. Keep the evidence tied to a version and avoid turning a planned feature into a finished claim.",
+      "cta": "Use the handoff structure for your next contribution.",
+      "tiktok": "Goal, actual state, files, checks, next step. A handoff structure for O.A. - O.S contributors. #OpenSource #AIWorkflow",
+      "instagram": "A good handoff lets someone continue the work. Save these five fields: goal, actual state, relevant files, checks and next concrete step.",
+      "x": "A useful handoff states the goal, current version, relevant files, checks and next action. O.A. - O.S keeps that context in the repo for contributors.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Write a handoff another builder can use",
+      "goal": "Rückmeldungen zur Fortsetzbarkeit und fehlenden Doku erfassen.",
+      "youtube_description": "A handoff someone can use — a practical O.A. - O.S walkthrough by ourark.io. Use the handoff structure for your next contribution.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 31,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "A useful handoff includes the next concrete step."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Tatsächlich vorhandene Projektdokumentation: Ziel, Stand, Belege, Grenzen, nächster Schritt.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Use the handoff structure for your next contribution."
+        }
+      ]
+    },
+    {
+      "day": 26,
+      "title": "Memory beyond one format",
+      "hook": "Which memory source should the next adapter support?",
+      "claims": [
+        "C07",
+        "C08"
+      ],
+      "screen": "Aktueller JSON-Adapter plus klar markierte Roadmap-Kandidaten; keine verbundenen Anbieterlogos.",
+      "voice": "The current local JSON memory path supports reading, text search and a context export. Other knowledge stores need their own adapters, identity checks and data contracts. We want to choose the next one based on real workflows. Tell us where your project knowledge lives and which operation you need first: list, read, search or something else. This screen separates the working adapter from roadmap ideas. A precise use case is more useful than a long list of logos.",
+      "cta": "Name your memory source and the first operation you need.",
+      "tiktok": "Where does your project memory live? Tell us the source and the first operation you need. Roadmap ideas are clearly labelled. #AIMemory #OpenSource",
+      "instagram": "Help choose the next memory adapter. Name the source, describe one workflow and tell us whether you need list, read or search first.",
+      "x": "Which memory source should O.A. - O.S support next? The local JSON path is the starting point. Name your source and one needed operation so we can scope a real adapter.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Choose the next project-memory adapter",
+      "goal": "Vorschläge nach Quelle und erster Capability gruppieren; keine Popularität erfinden.",
+      "youtube_description": "Memory beyond one format — a practical O.A. - O.S walkthrough by ourark.io. Name your memory source and the first operation you need.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 34,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Which memory source should the next adapter support?"
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Aktueller JSON-Adapter plus klar markierte Roadmap-Kandidaten; keine verbundenen Anbieterlogos.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Name your memory source and the first operation you need."
+        }
+      ]
+    },
+    {
+      "day": 27,
+      "title": "Choose a connection by its job",
+      "hook": "What manual step should the next connection remove?",
+      "claims": [
+        "C08",
+        "C12"
+      ],
+      "screen": "Issuevorlage für Quelle, Trigger, Ergebnis und Abnahmekriterium.",
+      "voice": "A useful integration request describes the work. What starts the process? Which system owns the data? What result do you need in the workspace? And how would we know the connection works? The O.A. - O.S contribution path turns that information into a scoped issue. Start with one manual step you repeat today. We can then discuss the adapter and its boundaries with a concrete example.",
+      "cta": "Open an integration request using one real workflow.",
+      "tiktok": "Name one manual step you repeat. We want integration requests built around a real job to be done. #BuildInPublic #Automation",
+      "instagram": "Describe the work before naming the integration: trigger, data owner, result and success check. Save this format for your next feature request.",
+      "x": "Request an O.A. - O.S integration with four details: trigger, data owner, needed result and success check. One real manual step is a useful place to start.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Request an integration people can actually build",
+      "goal": "Vollständige Integrationsanfragen zählen und nach Aufwand/Nutzen einordnen.",
+      "youtube_description": "Choose a connection by its job — a practical O.A. - O.S walkthrough by ourark.io. Open an integration request using one real workflow.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 29,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "What manual step should the next connection remove?"
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Issuevorlage für Quelle, Trigger, Ergebnis und Abnahmekriterium.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Open an integration request using one real workflow."
+        }
+      ]
+    },
+    {
+      "day": 28,
+      "title": "An honest central interface",
+      "hook": "One interface becomes useful one verified connection at a time.",
+      "claims": [
+        "C06",
+        "C08"
+      ],
+      "screen": "Ist-/Roadmap-Matrix: local, demo, adapter-ready, planned; keine Fake-live-Badges.",
+      "voice": "The long-term goal for O.A. - O.S is a central interface for your working environment. The practical path is to connect and verify each part. The repository shows what works locally, what uses sample data and what still needs an adapter. That clarity helps contributors choose useful next steps and helps users set expectations. Start with the connections you need most and keep their status visible as the system grows.",
+      "cta": "Read the current capability matrix and choose your next step.",
+      "tiktok": "A central interface grows through verified connections. See what works, what uses demo data and what is still planned in O.A. - O.S. #OpenSource #AIWorkflow",
+      "instagram": "A clear capability matrix makes an open project easier to use and extend. Save this view and choose one useful next connection.",
+      "x": "O.A. - O.S aims to become a central interface for your environment. The capability matrix separates working local features, demo data and future adapters.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Build a central interface one connection at a time",
+      "goal": "Verständnis der Produktgrenzen anhand konkreter Fragen auswerten.",
+      "youtube_description": "An honest central interface — a practical O.A. - O.S walkthrough by ourark.io. Read the current capability matrix and choose your next step.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 30,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "One interface becomes useful one verified connection at a time."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Ist-/Roadmap-Matrix: local, demo, adapter-ready, planned; keine Fake-live-Badges.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Read the current capability matrix and choose your next step."
+        }
+      ]
+    },
+    {
+      "day": 29,
+      "title": "What we learned",
+      "hook": "Here is what the first month actually taught us.",
+      "claims": [
+        "C12"
+      ],
+      "screen": "Nur tatsächlich gemessene Kanalzahlen oder echte anonymisierte Rückmeldungen; sonst Lernfragen.",
+      "voice": "It is time to review what we learned from sharing O.A. - O.S. Use the actual publishing log: which demos led to useful questions, where setup was unclear and which integrations people requested. Separate views from meaningful product feedback. If the data is still small, say so and focus on the examples we can verify. The next content batch and the next product issue should reflect what we learned, not an invented success story.",
+      "cta": "Tell us which tutorial would help you try the project.",
+      "tiktok": "Month-one review for O.A. - O.S: real feedback, real setup questions and the next useful tutorial. No invented milestones. #BuildInPublic #OpenSource",
+      "instagram": "What helped people understand the workspace? This review uses the actual campaign log and verified feedback. Tell us which tutorial you need next.",
+      "x": "Reviewing the first O.A. - O.S campaign: useful questions, setup friction and integration requests. We will use actual data and label small samples clearly. What tutorial would help you next?\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "What we learned from sharing O.A. - O.S",
+      "goal": "Gemessene Datenqualität prüfen; 24h/72h/7d-Fenster und kleine Stichproben explizit halten.",
+      "youtube_description": "What we learned — a practical O.A. - O.S walkthrough by ourark.io. Tell us which tutorial would help you try the project.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 32,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "Here is what the first month actually taught us."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Nur tatsächlich gemessene Kanalzahlen oder echte anonymisierte Rückmeldungen; sonst Lernfragen.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Tell us which tutorial would help you try the project."
+        }
+      ]
+    },
+    {
+      "day": 30,
+      "title": "Build the next chapter",
+      "hook": "The next version can start with your contribution.",
+      "claims": [
+        "C01",
+        "C12"
+      ],
+      "screen": "Aktueller Repo-Stand, echte Issues und priorisierte nächste Schritte; klare Mitmachoptionen.",
+      "voice": "O.A. - O.S is an open project by ourark.io, and the next version can start with a focused contribution. Try the workspace, improve the documentation, report a reproducible issue or propose a small adapter. Read the current capability matrix before you begin so your work starts from the real state. The repository contains the code and the collaboration path. Choose one useful next step and help make the central workspace easier for the next person.",
+      "cta": "Choose one issue, improvement or adapter proposal in the repo.",
+      "tiktok": "The next chapter of O.A. - O.S is open. Try it, improve a setup step or propose one small adapter. #OpenSource #BuildInPublic #OurArk",
+      "instagram": "Thirty days of workspace demos and learning. The project stays open for focused contributions. Save the repository and choose one useful next step.",
+      "x": "Build the next chapter of O.A. - O.S: try the local workspace, improve the docs, report a reproducible issue or propose a small adapter. The code and contribution path are open.\nhttps://github.com/MasterPlayspots/O.S.-W.S.",
+      "yt": "Build the next version of O.A. - O.S with us",
+      "goal": "Konkrete nächste Beiträge, Issuezuordnungen und wiederkehrende Interessenten erfassen.",
+      "youtube_description": "Build the next chapter — a practical O.A. - O.S walkthrough by ourark.io. Choose one issue, improvement or adapter proposal in the repo.\nRepository: https://github.com/MasterPlayspots/O.S.-W.S.\nRead the current capability matrix and licence before adapting the project. Demo/synthetic content is labelled in the clip. #OpenSource #OurArk",
+      "estimated_seconds": 33,
+      "status": "draft_requires_evidence",
+      "launch_date": null,
+      "shotlist": [
+        {
+          "time": "0–3 s",
+          "visual": "Echter UI-Ausschnitt oder klarer Titel, Hook als Untertitel.",
+          "audio": "The next version can start with your contribution."
+        },
+        {
+          "time": "3–10 s",
+          "visual": "Aktueller Repo-Stand, echte Issues und priorisierte nächste Schritte; klare Mitmachoptionen.",
+          "audio": "Ziel und Quelle des gezeigten Ablaufs benennen."
+        },
+        {
+          "time": "10–30 s",
+          "visual": "Einen durchgehenden echten Ablauf mit Cursor/Fokus aufnehmen; keine erfundenen Live-Werte.",
+          "audio": "Mittelteil des Voice-over; bei Bedarf auf maximal 45 Sekunden schneiden."
+        },
+        {
+          "time": "30–40 s",
+          "visual": "Ergebnis und nächsten Schritt zeigen, dann ruhige Repo-Endkarte.",
+          "audio": "Choose one issue, improvement or adapter proposal in the repo."
+        }
+      ]
+    }
+  ]
+}

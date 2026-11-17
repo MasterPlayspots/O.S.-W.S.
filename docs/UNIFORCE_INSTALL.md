@@ -1,3 +1,5 @@
+> Historische Implementierungsnotiz (vor O.A. - O.S 0.4). Für den aktuellen Produktstand gelten README.md, STATE.md und docs/INSTALLATION.md. Frühere Markenassets sind nicht Teil der aktuellen Auslieferung.
+
 # UNIFORCE Workspace – Installation und Agentenübergabe
 
 Stand 17.11.2026, Version 0.3. Ausgangspunkt der Umsetzung: `3b82b64a85a1546c495a876443d6eb3f8cd9f499` in `MasterPlayspots/O.S.-W.S.`. Ziel ist zunächst ein prüfbarer lokaler Arbeitsplatz. Eine Übertragung des Codes ist noch kein Anschluss an produktive Daten.

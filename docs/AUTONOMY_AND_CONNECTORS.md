@@ -1,3 +1,5 @@
+> Historische Implementierungsnotiz (vor O.A. - O.S 0.4). Für den aktuellen Produktstand gelten README.md, STATE.md und docs/INSTALLATION.md. Frühere Markenassets sind nicht Teil der aktuellen Auslieferung.
+
 # Eigenständig planen und handeln
 
 Stand 17.11.2026. **0.2 liest auf ausdrücklichen Klick öffentliche GitHub-Metadaten, führt keine externen Schreibaktionen aus und nutzt kein LLM.** Es erzeugt deterministische Pläne und Anschlussaufgaben. Die folgenden Ausführungsstufen sind der Implementierungsvertrag für spätere Versionen.

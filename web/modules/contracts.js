@@ -7,7 +7,7 @@ export function context(p){fields(p,['id','scope'],'Projekt');ident(p.id);if(!['
 export const overlaps=(a,b)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;
 export function validateLayout(input){
  fields(input,['schemaVersion','theme','pages'],'Layout');
- if(input.schemaVersion!==1||!['uniforce','black-glass'].includes(input.theme))throw Error('Layoutversion/Theme ungültig.');
+ if(input.schemaVersion!==1||!['uniforce','black-glass','oaos'].includes(input.theme))throw Error('Layoutversion/Theme ungültig.');
  if(!Array.isArray(input.pages)||!input.pages.length||input.pages.length>12)throw Error('1–12 Seiten erforderlich.');
  const ids=new Set();
  for(const p of input.pages){

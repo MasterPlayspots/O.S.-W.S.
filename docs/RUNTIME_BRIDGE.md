@@ -89,3 +89,8 @@ Kosten optional `{value,currency,quality,priceVersion}`; Währungen `EUR|USD`, H
 ## Host-Anschluss
 
 Einen freigegebenen Quelladapter mit erlaubten Feldern, projektgebundenem Cursor und zuverlässiger ID-Normalisierung bauen. Kein Rohdump von Chat-/Sessiondateien. Authentifizierung bleibt außerhalb des Repos in der bestehenden Host-Konfiguration. Für produktiven Controls-/Kalender-/Chatbetrieb fehlen hier Vertrag, autorisierter Zugriff, Widerrufsprüfung und Abnahme.
+
+
+## Synthetischer Ersttest
+
+`node bin/bridge.mjs --file examples/runtime-events.example.jsonl` importiert eine ausdrücklich synthetisch benannte Session und einen Demo-Usage-Eintrag. Sessionqualität `reported` bezeichnet nur die importierte Meldung; `Synthetic example`/`Example CLI` sind keine echten Providerläufe. Dies in einem separaten Test-Profil verwenden, nicht mit echten Laufdaten vermischen.

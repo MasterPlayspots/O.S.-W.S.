@@ -1,3 +1,5 @@
+> Historische Implementierungsnotiz (vor O.A. - O.S 0.4). Für den aktuellen Produktstand gelten README.md, STATE.md und docs/INSTALLATION.md. Frühere Markenassets sind nicht Teil der aktuellen Auslieferung.
+
 # Prüfstand · 17.11.2026
 
 Basis: `3b82b64a85a1546c495a876443d6eb3f8cd9f499`, Node `24.22.1`. Version 0.3, Zweig `feat/uniforce-workspace`. Prüfergebnis bezieht sich auf den neuen lokalen Entwicklungsstand; keine Produktivabnahme.
@@ -37,6 +39,6 @@ Browser-Konsolenmeldungen der installierten Browser-Erweiterung wurden von Appfe
 
 ## Sichtnachweis
 
-![Geprüfter UNIFORCE-Arbeitsplatz mit klar bezeichneten Beispieldaten](verification/uniforce-desktop.jpg)
+![Geprüfter UNIFORCE-Arbeitsplatz mit klar bezeichneten Beispieldaten](https://github.com/MasterPlayspots/O.S.-W.S./blob/b8902d887960481471b5718bcfe53262271a9ae4/docs/verification/uniforce-desktop.jpg)
 
 Browser-Aufnahme des lokalen Entwicklungsstands; die Zahlen und Modellnamen sind Demonstrationsdaten. Zusätzlich wurde eine lokale Automation nach Vorschau aktiviert und zweimal mit derselben Ereignis-ID getestet: genau ein Reportentwurf.
