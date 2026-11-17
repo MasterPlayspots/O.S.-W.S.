@@ -38,7 +38,7 @@ export function validatePreferences(p) {
   if (!Number.isInteger(p.focus.visibleLimit)||p.focus.visibleLimit<1||p.focus.visibleLimit>6) fail('Visible limit must be 1–6');
   if (!['quiet','digest'].includes(p.focus.notifications)||typeof p.focus.reducedMotion!=='boolean') fail('Invalid focus preferences');
   unknownKeys(p.appearance,['theme','glass','depth'],'appearance');
-  if(p.appearance.theme!=='black-glass'||!Number.isFinite(p.appearance.glass)||p.appearance.glass<0||p.appearance.glass>100||!Number.isFinite(p.appearance.depth)||p.appearance.depth<0||p.appearance.depth>100) fail('Invalid appearance');
+  if(!['black-glass','uniforce'].includes(p.appearance.theme)||!Number.isFinite(p.appearance.glass)||p.appearance.glass<0||p.appearance.glass>100||!Number.isFinite(p.appearance.depth)||p.appearance.depth<0||p.appearance.depth>100) fail('Invalid appearance');
   if (!Array.isArray(p.pinnedCapabilities)||new Set(p.pinnedCapabilities).size!==p.pinnedCapabilities.length||p.pinnedCapabilities.some(c=>!seen.has(c))) fail('Invalid pinned capabilities');
   if(p.pinnedCapabilities.length>p.focus.visibleLimit) fail('Pinned elements exceed the visible limit');
   return clone(p);

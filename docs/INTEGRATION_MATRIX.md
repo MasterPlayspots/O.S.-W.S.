@@ -1,3 +1,28 @@
+# Integrationsmatrix · aktueller Stand 0.3
+
+17.11.2026. Die folgende Tabelle ersetzt für die Hauptoberfläche die darunter archivierte 0.2-Bewertung.
+
+| Baustein | Jetzt implementiert | Tatsächlich angeschlossen / verbleibend |
+|---|---|---|
+| UNIFORCE-Shell | sechs Fenster, drei Seiten, Kontext, KPIs, mobile Einzelansicht | Browser mit synthetischen Fixtures geprüft |
+| Fenster/Layout | Pin, Raster, Resize, Maxi/Minimieren, Duplikat, Seiten, Undo, Revision | volle Tabgruppen, echter Split und freie Mobile-Geometrie offen |
+| Persistenz/Verlauf | lokale Scoped-Dateien, 409, 40 Snapshots, Layout-Restore | kein Firmen-/Multiuser-Backend, kein Backupservice |
+| Repo | gezielter Git-/Textleser, optionaler Hash-geprüfter Dateischreiber | Lesen im ausgewählten Entwicklungsrepo geprüft |
+| Runtime-Bridge | lokale JSONL-/HTTP-Metadaten, Cursor-SSE, Deduplizierung | synthetischer End-to-End-Import geprüft; kein produktiver Controls-Adapter |
+| Modellplaner | opt-in Codex CLI, geprüfte JSON-Antwort, Pins, Übernahme, Usage | echte CLI erkannt; Aufruf am internen App-Server durch Read-only-Dateisystem blockiert |
+| Token/Kosten | Request/Attempt, Snapshot/Delta, finale Korrektur, Null statt -1, Währungen | reale externe Sessionfeeds fehlen; Fixtures sind ausdrücklich Demo |
+| Automationen | Vorschau, versionsgebundene Aktivierung, lokaler Ein-Schritt-Runner | manuelle Ereignisse; kein externer Executor oder Firmenlistener |
+| Code/Terminal | native bearbeitbare Entwürfe, Quelldateien, Git-Statistik | Monaco/Diffeditor/xterm/PTY optional und nicht enthalten |
+| Raum/Zeit | CSS-2.5D und echter lokaler Snapshotverlauf | kein Three.js/WebGL, kein Gyroskop, keine begehbare Welt |
+| Controls/A12, Kalender, Chat, Meet | Lücken und Anschlussvertrag dokumentiert | Zielzugang, autorisierte APIs und reale Adapter fehlen |
+| Betriebsstufe | Loopback-Einzelplatz; Installations-/Übergabeanleitung | kein Serverdeploy, keine VM, kein Teamlogin |
+
+[Prüfstand](UNIFORCE_ACCEPTANCE.md) · [Installation](UNIFORCE_INSTALL.md) · [Datenvertrag](RUNTIME_BRIDGE.md)
+
+---
+
+## Archiv: 0.2
+
 # Was ist im Repo – und was muss noch verbunden werden?
 
 Stand: 17.11.2026. Ausgangspunkt ist der geprüfte öffentliche 0.2-Stand `10f02c4ef6bae9b593e0c3ee3d1ffc5c92723874`. Die folgende Matrix dokumentiert Implementierung, nicht bloß Produktwünsche. „Im Repo“ bedeutet Code oder ausdrücklich bezeichnete Dokumentation; eine API-Beschreibung ist keine aktive Anbieteranbindung.

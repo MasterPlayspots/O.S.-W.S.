@@ -1,3 +1,5 @@
+> **Aktueller Einstieg (0.3, 17.11.2026):** [UNIFORCE_INSTALL.md](UNIFORCE_INSTALL.md) und [WORKSPACE_ARCHITECTURE.md](WORKSPACE_ARCHITECTURE.md). Die folgenden Abschnitte beschreiben den weiterhin verfügbaren 0.2-Bootstrap unter `/setup`; neue Hauptoberfläche und Modell-/Bridge-Grenzen stehen in der 0.3-Dokumentation.
+
 # Lokales Studio 0.2 · Vertrag und Grenzen
 
 Stand 17.11.2026. Implementierung: `src/server.mjs`, `src/store.mjs`, `src/github.mjs`, `web/`, `bin/studio.mjs`.

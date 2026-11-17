@@ -1,3 +1,5 @@
+> **Aktueller Einstieg (0.3, 17.11.2026):** [UNIFORCE_INSTALL.md](UNIFORCE_INSTALL.md) und [WORKSPACE_ARCHITECTURE.md](WORKSPACE_ARCHITECTURE.md). Die folgenden Abschnitte beschreiben den weiterhin verfügbaren 0.2-Bootstrap unter `/setup`; neue Hauptoberfläche und Modell-/Bridge-Grenzen stehen in der 0.3-Dokumentation.
+
 # Agentenübergabe · installieren, prüfen, schrittweise verbinden
 
 Stand 17.11.2026. Dieser Auftrag ist für einen externen Coding-Agenten im Checkout gedacht, etwa Claude Code oder Codex. Er startet keine im Produkt eingebauten Agenten. Die Oberfläche benötigt für Version 0.2 kein KI-Abonnement oder API-Konto. Ein externer Coding-Agent muss separat vorhanden sein und passend autorisierten Zugriff auf den Checkout erhalten.

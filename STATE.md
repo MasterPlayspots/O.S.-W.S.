@@ -1,3 +1,44 @@
+# STATE · UNIFORCE AI Workspace 0.3
+
+Stand: 17.11.2026. Feature-Entwicklung aus Basis `3b82b64a85a1546c495a876443d6eb3f8cd9f499` (0.2.0), isolierter Zweig `feat/uniforce-workspace`. Das bisherige Hauptbranch-/Produktionssystem wird nicht durch lokalen Start verändert.
+
+## Auftrag und Quellen
+
+- Nutzerauftrag: vorhandenes O.S.-W.S.-Repo für den UNIFORCE-Arbeitsalltag gemäß hochgeladenem Konzept und Handoff umbauen, prüfbar fertigstellen und zur Übertragung/Anbindung vorbereiten.
+- Quellen: bereitgestellter `UNIFORCE_AI_Workspace_Handoff(1).md` einschließlich eingebetteter Repo-Integration und Variablen-/Arbeitsprozesse; `UNIFORCE_AI_Workspace_Konzept(1).pdf` (16 Seiten, visuelle Referenzen); geprüfter Repo-Basisstand; Original-Logo von `https://uni-force.de/assets/brand/header.svg` am 17.11.2026.
+- Interne Arbeitsunterlagen/Runtime-Daten werden nicht in dieses öffentliche Repo übernommen. Führende Firmenstruktur bleibt außerhalb dieses persönlichen UI-/Präsentationsspeichers.
+
+## Abgeschlossene Wellen
+
+- [x] Remote/HEAD/Arbeitsbaum und Repo-Anweisungen gelesen; Basistests 26/26 bestanden.
+- [x] Reversibler eigener Worktree; kein Frameworkwechsel, keine Paketinstallation.
+- [x] UNIFORCE-Tokens, lokales Originalasset, sechs Fenster, drei Seiten, KPIs und Inspector.
+- [x] Stabile Fenster-/Editorinstanzen, lokale Entwürfe, Auswahl echter Repo-Dateien, Raster/Pins/Seiten/Undo und mobile Reihenfolge.
+- [x] Revisionsgeschützter Workspace-State, Konfliktbehandlung, Replay und reine Layoutwiederherstellung.
+- [x] Lokaler Repo-Adapter, normalisierte Event-Bridge, SSE, Usage-Deduplizierung und abgegrenzter lokaler Automationsrunner.
+- [x] Optionaler Codex-Planungsadapter implementiert; echter Startversuch durchgeführt und Fehler dokumentiert, nicht als Erfolg gezählt.
+- [x] Installationsanleitung, Architektur, Bridge-Vertrag und aktuelle Integrationsmatrix geschrieben.
+- [x] 47 automatisierte Tests bestanden, einschließlich HTTP-/CLI-Import, Scope-Isolation, Preview-Aktivierung, Modellvertrag und Prozess-Timeout mit synthetischer Runtime.
+- [x] Browser: Entwurf speichern, Fokus/Maximieren, Layoutvorschlag, Speicherung, Verlauf, Rückkehr, echte Repo-Datei und mobile Fensterauswahl geprüft.
+
+## Reale Grenzen / keine Scheinanbindungen
+
+1. **Zielhost/Controls:** Hier kein Arbeitsserver-/A12-Zugang. Auch die verbundene GitHub-Reposuche nach LinuxServer und UNIFORCE lieferte keinen zugänglichen Treffer. Das ersetzt keine Prüfung am Ziel. Keine Firmen-Datenbankanbindung, keine Zielinstallation.
+2. **Modell:** Codex `0.167.0-alpha.4`, vorhandene Anmeldung erkannt. Echte Aufrufe scheiterten beim internen App-Server-Start mit `Read-only file system (os error 30)`. Kein erfolgreicher LLM-Lauf und keine echte gemessene Provider-Usage dieses Arbeitsboards. Standard bleibt deterministisch.
+3. **Sessionsteuerung:** importierte Metadaten, keine verbundenen PTYs/Chat-/Start-/Pause-/Cancel-Adapter. Modell-Planerabbruch betrifft ausschließlich den optionalen Layoutlauf.
+4. **Optionale Komponenten:** Monaco, xterm, Three.js, Gyroskop und volle Tabgruppen nicht enthalten; CSS-2.5D klar so benannt.
+5. **Abnahme:** Browserprüfung bei tatsächlich beobachteten CSS-Breiten, keine echte iPhone-/Safari-/MacBook-Hardwareabnahme. Exakte Gerätematrix und Reduced-Motion-Systemeinstellung am Ziel offen.
+6. **Betrieb:** lokaler Einzelplatz, keine Mehrbenutzerrechte/VM. Keine Server-, DNS-, Access-, Tunnel- oder bestehenden Dienständerungen.
+
+## Nächste Session: ohne Wiederholung fortsetzen
+
+1. Diesen geprüften Feature-Stand und `docs/UNIFORCE_INSTALL.md` am freigegebenen Arbeits-Host öffnen; eigenen Datenordner bestimmen, Start + Browser prüfen.
+2. Autorisierten Controls-Lesevertrag und Zielzugang bestätigen. Ausschließlich erlaubte Metadaten in den bestehenden Bridge-Vertrag normalisieren; Source-/Scope-/Widerrufs-/Idempotenztests ergänzen.
+3. CLI-Startfehler auf dem Ziel-Host prüfen, begrenzten Modelllauf bestätigen und echte Usage erfassen. Erst danach weiteren Runtime-Adapter/PTY mit eigenen Rechten aufnehmen.
+4. `docs/UNIFORCE_ACCEPTANCE.md` mit realen Quellenbelegen vervollständigen; Team-/Serverbetrieb getrennt freigeben und härten.
+
+## Frühere Sitzungen (historisch)
+
 # STATE · Adaptive Studio
 
 Stand 17.11.2026 · Version 0.2. Fortsetzung des öffentlichen Bootstrap-Kerns.

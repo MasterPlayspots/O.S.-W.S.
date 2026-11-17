@@ -1,3 +1,4 @@
+let retainedTheme="black-glass";
 'use strict';
 const $=id=>document.getElementById(id), session=document.querySelector('meta[name="oa-session"]').content;
 const catalog=[['project.metadata.read','Projektüberblick'],['tasks.read','Aufgaben'],['calendar.read','Kalender'],['messages.read','Kommunikation'],['files.read','Dateien'],['metrics.read','Kennzahlen'],['model.execute','KI-Arbeitsplatz']];
@@ -19,8 +20,9 @@ for(const [capability,title] of catalog){
   check.addEventListener('input',()=>{if(!check.checked)pin.setAttribute('aria-pressed','false');syncGoals();});
 }
 function syncGoals(){for(const r of goalRows.values()){r.rangeLabel.hidden=!r.check.checked;r.pin.disabled=!r.check.checked;r.output.textContent=r.range.value;}}
-function profile(){return {preferences:{project:{...project},goals:[...goalRows].filter(([,r])=>r.check.checked).map(([capability,r])=>({capability,priority:Number(r.range.value)})),pinnedCapabilities:[...goalRows].filter(([,r])=>r.check.checked&&r.pin.getAttribute('aria-pressed')==='true').map(([c])=>c),focus:{visibleLimit:Number($('limit').value),notifications:$('notifications').value,reducedMotion:$('motion').checked},appearance:{theme:'black-glass',glass:Number($('glass').value),depth:Number($('depth').value)}},repository:$('repository').value.trim()||null};}
+function profile(){return {preferences:{project:{...project},goals:[...goalRows].filter(([,r])=>r.check.checked).map(([capability,r])=>({capability,priority:Number(r.range.value)})),pinnedCapabilities:[...goalRows].filter(([,r])=>r.check.checked&&r.pin.getAttribute('aria-pressed')==='true').map(([c])=>c),focus:{visibleLimit:Number($('limit').value),notifications:$('notifications').value,reducedMotion:$('motion').checked},appearance:{theme:retainedTheme,glass:Number($('glass').value),depth:Number($('depth').value)}},repository:$('repository').value.trim()||null};}
 function fill(value){
+  retainedTheme=value.preferences.appearance.theme;
   const p=value.preferences;
   for(const [cap,r] of goalRows){const goal=p.goals.find(g=>g.capability===cap);r.check.checked=!!goal;r.range.value=String(goal?.priority??50);r.pin.setAttribute('aria-pressed',String(p.pinnedCapabilities.includes(cap)));}
   $('limit').value=p.focus.visibleLimit;$('notifications').value=p.focus.notifications;$('motion').checked=p.focus.reducedMotion;$('glass').value=p.appearance.glass;$('depth').value=p.appearance.depth;$('repository').value=value.repository||'';
