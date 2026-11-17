@@ -1,0 +1,31 @@
+{
+  "project": {
+    "id": "demo-project",
+    "scope": "business"
+  },
+  "sourceMode": "synthetic_fixture",
+  "services": [
+    {
+      "id": "sample-tasks",
+      "kind": "manual",
+      "status": "declared_ready",
+      "capabilities": [
+        "tasks.read"
+      ],
+      "observedAt": "2026-11-17T00:00:00Z",
+      "expiresAt": "2027-11-17T00:00:00Z",
+      "evidence": "Synthetischer Aufgabenbestand, kein echter Dienst"
+    },
+    {
+      "id": "sample-calendar",
+      "kind": "api",
+      "status": "needs_auth",
+      "capabilities": [
+        "calendar.read"
+      ],
+      "observedAt": "2026-11-17T00:00:00Z",
+      "expiresAt": "2027-11-17T00:00:00Z",
+      "evidence": "Beispiel für noch erforderliche Anmeldung"
+    }
+  ]
+}

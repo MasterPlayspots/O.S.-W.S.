@@ -1,0 +1,41 @@
+{
+  "project": {
+    "id": "demo-project",
+    "scope": "business"
+  },
+  "goals": [
+    {
+      "capability": "tasks.read",
+      "priority": 100
+    },
+    {
+      "capability": "calendar.read",
+      "priority": 80
+    },
+    {
+      "capability": "project.metadata.read",
+      "priority": 65
+    },
+    {
+      "capability": "messages.read",
+      "priority": 40
+    },
+    {
+      "capability": "model.execute",
+      "priority": 30
+    }
+  ],
+  "pinnedCapabilities": [
+    "tasks.read"
+  ],
+  "focus": {
+    "visibleLimit": 3,
+    "notifications": "quiet",
+    "reducedMotion": true
+  },
+  "appearance": {
+    "theme": "black-glass",
+    "glass": 55,
+    "depth": 20
+  }
+}

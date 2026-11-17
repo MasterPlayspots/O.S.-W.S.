@@ -1,0 +1,13 @@
+{
+  "name": "os-ws-bootstrap",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "description": "Local, deterministic bootstrap planner for an adaptive workspace. No model, external connector or executor is connected.",
+  "scripts": {
+    "test": "node --test",
+    "demo": "node bin/oa.mjs plan --inventory examples/inventory.json --preferences examples/preferences.json",
+    "inspect": "node bin/oa.mjs inspect"
+  }
+}
