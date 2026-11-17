@@ -1,6 +1,6 @@
 {
   "name": "oa-os",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -12,7 +12,7 @@
     "demo": "node bin/oa.mjs plan --inventory examples/inventory.json --preferences examples/preferences.json",
     "inspect": "node bin/oa.mjs inspect",
     "start": "node bin/studio.mjs",
-    "dev": "node bin/studio.mjs --connections-config examples/connections.example.json",
+    "dev": "node bin/studio.mjs --data-dir .local/development-v05 --connections-config examples/connections.example.json",
     "bridge": "node bin/bridge.mjs"
   },
   "license": "MIT",

@@ -2,13 +2,13 @@
 import { createHash } from 'node:crypto';
 
 const CAPABILITIES = Object.freeze({
-  'project.metadata.read': { title: 'Projektüberblick', widget: 'project-summary' },
-  'tasks.read': { title: 'Nächste Aufgabe', widget: 'task-focus' },
-  'calendar.read': { title: 'Zeit und Termine', widget: 'calendar' },
-  'messages.read': { title: 'Kommunikation', widget: 'inbox' },
-  'files.read': { title: 'Arbeitsmaterial', widget: 'files' },
-  'metrics.read': { title: 'Kennzahlen', widget: 'metrics' },
-  'model.execute': { title: 'KI-Arbeitsplatz', widget: 'agent-chat' }
+  'project.metadata.read': { title: 'Project overview', widget: 'project-summary' },
+  'tasks.read': { title: 'Next task', widget: 'task-focus' },
+  'calendar.read': { title: 'Time and schedule', widget: 'calendar' },
+  'messages.read': { title: 'Communication', widget: 'inbox' },
+  'files.read': { title: 'Work materials', widget: 'files' },
+  'metrics.read': { title: 'Metrics', widget: 'metrics' },
+  'model.execute': { title: 'AI workspace', widget: 'agent-chat' }
 });
 const fail = message => { throw new Error(message); };
 const id = value => typeof value === 'string' && /^[a-zA-Z0-9._-]{1,80}$/.test(value);
@@ -80,10 +80,10 @@ function gapFor(capability, services, now) {
 
 function connectorTask(capability,resolution) {
   const steps=resolution.status==='needs_auth'
-    ? ['Anbieter und benötigte Leserechte prüfen','Anmeldung durch Kontoinhaber','Fähigkeiten erneut lesen und Verbindung testen']
+    ? ['Check the provider and required read permissions','Account owner signs in','Read the capabilities again and test the connection']
     : resolution.status==='stale'
-      ? ['Freigegebene Quelle erneut prüfen','Aktuelle Fähigkeiten und Authentifizierung bestätigen']
-      : ['Vorhandene eigene Adapter prüfen','Offizielle Anbieterquelle und MCP-Registry nach Kandidaten prüfen','Herkunft, Version, Funktionsumfang und Rechte bewerten','Ohne MCP: dokumentierte API prüfen','Falls API vorhanden: Adapterentwurf und Tests vorbereiten','Ohne geeignete API: manuellen Import oder ausdrücklich freigegebene Browserbedienung anbieten'];
+      ? ['Check the authorized source again','Confirm current capabilities and authentication']
+      : ['Check existing custom adapters','Check official provider sources and the MCP registry for candidates','Assess provenance, version, capabilities and permissions','Without MCP: check the documented API','If an API is available: prepare an adapter draft and tests','Without a suitable API: offer manual import or explicitly authorized browser interaction'];
   return {id:'connect-'+capability,capability,status:resolution.status,steps,automaticInstallation:false,execution:actionDecision('connector.install')};
 }
 
@@ -96,16 +96,16 @@ export function buildPlan({inventory,preferences,now=Date.now()}) {
   const dots=ordered.map(g=>({
     id:'dot-'+g.capability,capability:g.capability,title:CAPABILITIES[g.capability].title,widget:CAPABILITIES[g.capability].widget,
     priority:g.priority,pinned:pinned.has(g.capability),resolution:gapFor(g.capability,i.services,now),
-    reason:`Vom Nutzer mit Priorität ${g.priority} angegeben${pinned.has(g.capability)?'; fest angeheftet':''}`
+    reason:`Set by the user with priority ${g.priority}${pinned.has(g.capability)?'; pinned':''}`
   }));
   const visible=dots.slice(0,p.focus.visibleLimit),deferred=dots.slice(p.focus.visibleLimit);
   const connectorTasks=dots.filter(d=>d.resolution.status!=='declared_available').map(d=>connectorTask(d.capability,d.resolution));
   const graph={nodes:[{id:'project-'+p.project.id,type:'Project',scope:p.project.scope},...i.services.map(s=>({id:'service-'+s.id,type:'Service',evidence:s.evidence})),...dots.map(d=>({id:d.id,type:'DOT',capability:d.capability}))],edges:dots.flatMap(d=>[{from:'project-'+p.project.id,to:d.id,type:'contains'},...(d.resolution.serviceId?[{from:d.id,to:'service-'+d.resolution.serviceId,type:'declared_binding'}]:[])])};
   const plan={schemaVersion:'0.1',mode:'plan_only',sourceMode:i.sourceMode,project:p.project,generatedAt:new Date(now).toISOString(),
     autonomy:{reasoning:'deterministic_rules',externalActionsExecuted:0,modelConnected:false,actions:['inventory.summarize','layout.draft','connector.plan'].map(actionDecision)},
-    appearance:p.appearance,focus:{...p.focus,rearrangeDuringWork:false,objective:'Nutzerziele mit wenig sichtbaren Elementen; keine gemessene Produktivitätsgarantie'},
+    appearance:p.appearance,focus:{...p.focus,rearrangeDuringWork:false,objective:'User goals with few visible items; no measured productivity guarantee'},
     views:{desktop:{layout:'grid',visible:visible.map(d=>d.id),drawer:deferred.map(d=>d.id)},mobile:{layout:'stack',primary:visible[0].id,secondary:visible.slice(1).map(d=>d.id),drawer:deferred.map(d=>d.id)}},
-    dots,graph,connectorTasks,nextQuestion:connectorTasks.length?'Welche dieser Quellen möchtest du als erste verbinden?':'Passt diese Reihenfolge zu deinem nächsten Arbeitsschritt?',
+    dots,graph,connectorTasks,nextQuestion:connectorTasks.length?'Which source would you like to connect first?':'Does this order fit your next step?',
     journal:[{type:'inventory.accepted',sourceMode:i.sourceMode},{type:'goals.prioritized',count:dots.length},{type:'layout.proposed',visible:visible.length},{type:'connector.gaps',count:connectorTasks.length}]};
   const signature={...plan,generatedAt:undefined};
   plan.id=createHash('sha256').update(JSON.stringify(signature)).digest('hex').slice(0,24);

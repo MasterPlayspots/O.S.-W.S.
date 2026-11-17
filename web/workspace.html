@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="oa-session" content="__SESSION__"><meta name="color-scheme" content="dark light">
@@ -11,48 +11,48 @@
 <body>
 <header class="app-header">
  <a class="brand" href="/" aria-label="O.A. - O.S"><b class="brand-mark" data-brand-monogram>O.A.</b><span class="brand-copy"><strong data-brand-name>O.A. - O.S</strong><small data-brand-tagline>Your tools. One workspace.</small></span></a>
- <nav aria-label="Arbeitsansichten" id="view-nav"><button data-view="workspace" aria-current="page">Workspace</button><button data-view="code">Code</button><button data-view="sessions">Sessions</button><button data-view="automations">Automationen</button><button data-view="time">Zeit</button><button data-view="connections">Verbindungen</button><button data-view="memory">Memory</button></nav>
- <div class="header-actions"><button id="search-button" aria-label="Fenster suchen">⌕ <span>Suchen</span></button><button id="spatial-button" aria-pressed="false">Raum</button><button id="new-window" class="primary" aria-label="Neues Fenster">＋</button><button id="settings-button" class="avatar" aria-label="Arbeitsplatz einrichten">O</button></div>
+ <nav aria-label="Workspace views" id="view-nav"><button data-view="workspace" aria-current="page">Workspace</button><button data-view="code">Code</button><button data-view="sessions">Sessions</button><button data-view="automations">Automations</button><button data-view="time">Time</button><button data-view="connections">Connections</button><button data-view="memory">Memory</button></nav>
+ <div class="header-actions"><button id="search-button" aria-label="Search windows">⌕ <span>Search</span></button><button id="spatial-button" aria-pressed="false">Spatial view</button><button id="new-window" class="primary" aria-label="New window">＋</button><button id="settings-button" class="avatar" aria-label="Set up your workspace">O</button></div>
 </header>
 <div class="app-body">
- <nav class="rail" aria-label="Bereiche"><button data-view="workspace" aria-label="Dashboard">▦</button><button data-view="code" aria-label="Code">‹/›</button><button data-view="sessions" aria-label="Sessions">◫</button><button data-view="automations" aria-label="Automationen">ϟ</button><button data-view="time" aria-label="Verlauf">◷</button><button id="sources-button" aria-label="Verbindungen">⊙</button><button id="onboarding-button" aria-label="Geführtes Onboarding">✦</button></nav>
+ <nav class="rail" aria-label="Areas"><button data-view="workspace" aria-label="Dashboard">▦</button><button data-view="code" aria-label="Code">‹/›</button><button data-view="sessions" aria-label="Sessions">◫</button><button data-view="automations" aria-label="Automations">ϟ</button><button data-view="time" aria-label="History">◷</button><button id="sources-button" aria-label="Connections">⊙</button><button id="onboarding-button" aria-label="Guided onboarding">✦</button></nav>
  <aside class="project-sidebar">
-  <div class="sidebar-heading"><strong>Projekte</strong><button id="context-button" aria-label="Projektkontext wechseln">＋</button></div>
+  <div class="sidebar-heading"><strong>Projects</strong><button id="context-button" aria-label="Switch project context">＋</button></div>
   <button class="project-active" id="project-home">▱ <span>Workspace Core</span> ›</button><div class="context-label" id="context-label"></div>
-  <div class="sidebar-heading spaced"><strong>Seiten</strong><button id="add-page" aria-label="Seite hinzufügen">＋</button></div>
-  <nav id="page-nav" aria-label="Workspace-Seiten"></nav>
-  <section class="side-section"><h3>▣ Heute</h3><div id="today-list"></div></section>
-  <section class="side-section"><h3>◷ Termine</h3><p class="muted">Kalender nicht verbunden.</p><button class="text-button" data-open-sources>Quelle auswählen ↗</button></section>
-  <section class="side-section"><h3>◇ Datenquelle</h3><select id="data-mode" aria-label="Datenmodus"><option value="demo">Demonstration</option><option value="connected">Verbundene Quellen</option></select><p class="muted" id="source-caption">Beispieldaten, keine aktiven KI-Läufe.</p></section>
-  <a class="legacy-link" href="/setup">Einrichtungsassistent ↗</a>
+  <div class="sidebar-heading spaced"><strong>Pages</strong><button id="add-page" aria-label="Add page">＋</button></div>
+  <nav id="page-nav" aria-label="Workspace pages"></nav>
+  <section class="side-section"><h3>▣ Today</h3><div id="today-list"></div></section>
+  <section class="side-section"><h3>◷ Schedule</h3><p class="muted">Calendar not connected.</p><button class="text-button" data-open-sources>Select source ↗</button></section>
+  <section class="side-section"><h3>◇ Data source</h3><select id="data-mode" aria-label="Data mode"><option value="demo">Demonstration</option><option value="connected">Connected sources</option></select><p class="muted" id="source-caption">Sample data, no active AI runs.</p></section>
+  <a class="legacy-link" href="/setup">Setup wizard ↗</a>
  <a class="legacy-link" data-brand-website href="https://ourark.io" target="_blank" rel="noopener noreferrer">ourark.io ↗</a>
  </aside>
  <main class="workspace-main">
-  <div class="workspace-heading"><div><span class="eyebrow" id="mode-badge">DEMONSTRATION</span><h1 id="headline">Dein Arbeitsplatz.<br>Alle Ebenen.</h1></div><div class="heading-actions"><button id="layout-button">▦ Layout planen</button><button id="inspector-toggle" aria-expanded="true">Kontext ›</button></div></div>
-  <div class="project-strip"><div><strong id="project-title">Workspace Core</strong><span class="muted" id="milestone">Arbeitsplatz · Iteration 01</span></div><label>Zeitraum<select id="time-range"><option value="project">Projekt gesamt</option><option value="today">Heute</option></select></label><span id="updated-at" class="muted"></span></div>
-  <section class="kpis" id="kpis" aria-label="Projektkennzahlen"></section>
-  <div class="workspace-controls"><nav id="mobile-pages" aria-label="Seite wählen"></nav><select id="mobile-window" aria-label="Aktives Fenster"></select><div class="persistence"><button id="undo-layout" aria-label="Layout rückgängig">↶</button><button id="save-layout" class="primary">Layout speichern</button><span id="layout-state">Noch nicht gespeichert</span><button id="refresh-state" hidden>Stand prüfen</button></div></div>
-  <section class="proposal-banner" id="proposal-banner" hidden><div><strong>Layoutvorschlag</strong><p id="proposal-reason"></p></div><button id="accept-proposal" class="primary">Übernehmen</button><button id="discard-proposal">Verwerfen</button></section>
-  <section class="replay-banner" id="replay-banner" hidden><strong>Historischer Zustand · nur lesen</strong><span id="replay-time"></span><button id="return-live">Aktueller Stand</button><button id="restore-layout">Nur Layout wiederherstellen</button></section>
-  <section id="sessions-overview" class="content-panel" hidden aria-label="Sessionübersicht"></section>
-  <section id="window-grid" class="window-grid" aria-label="Arbeitsfenster"></section>
+  <div class="workspace-heading"><div><span class="eyebrow" id="mode-badge">DEMONSTRATION</span><h1 id="headline">Your workspace.<br>Every layer.</h1></div><div class="heading-actions"><button id="layout-button">▦ Plan layout</button><button id="inspector-toggle" aria-expanded="true">Context ›</button></div></div>
+  <div class="project-strip"><div><strong id="project-title">Workspace Core</strong><span class="muted" id="milestone">Workspace · Iteration 01</span></div><label>Time range<select id="time-range"><option value="project">Entire project</option><option value="today">Today</option></select></label><span id="updated-at" class="muted"></span></div>
+  <section class="kpis" id="kpis" aria-label="Project metrics"></section>
+  <div class="workspace-controls"><nav id="mobile-pages" aria-label="Choose page"></nav><select id="mobile-window" aria-label="Active window"></select><div class="persistence"><button id="undo-layout" aria-label="Undo layout change">↶</button><button id="save-layout" class="primary">Save layout</button><span id="layout-state">Not saved yet</span><button id="refresh-state" hidden>Check latest version</button></div></div>
+  <section class="proposal-banner" id="proposal-banner" hidden><div><strong>Layout proposal</strong><p id="proposal-reason"></p></div><button id="accept-proposal" class="primary">Apply</button><button id="discard-proposal">Discard</button></section>
+  <section class="replay-banner" id="replay-banner" hidden><strong>Historical state · read only</strong><span id="replay-time"></span><button id="return-live">Current state</button><button id="restore-layout">Restore layout only</button></section>
+  <section id="sessions-overview" class="content-panel" hidden aria-label="Session overview"></section>
+  <section id="window-grid" class="window-grid" aria-label="Workspace windows"></section>
   <div id="closed-windows" class="closed-windows"></div>
   <section id="automation-panel" class="content-panel" hidden></section>
-  <section id="connections-panel" class="integration-panel" hidden aria-label="Verbindungen"></section>
+  <section id="connections-panel" class="integration-panel" hidden aria-label="Connections"></section>
   <section id="memory-panel" class="integration-panel" hidden aria-label="Memory"></section>
   <section id="time-panel" class="content-panel" hidden></section>
-  <section class="developer-dock"><button id="git-dock">⑂ Git · Quelle wählen</button><button id="tests-dock">△ Tests · kein Live-Nachweis</button><button id="context-dock">◫ Kontext · nicht gemeldet</button><button id="terminal-dock">›_ Terminal</button><button id="handoff-button">Übergabe ↗</button></section>
+  <section class="developer-dock"><button id="git-dock">⑂ Git · Select source</button><button id="tests-dock">△ Tests · no live results</button><button id="context-dock">◫ Context · not reported</button><button id="terminal-dock">›_ Terminal</button><button id="handoff-button">Handoff ↗</button></section>
   <section id="dock-panel" class="content-panel" hidden></section>
  </main>
  <aside class="inspector" id="inspector">
-  <section class="inspector-section"><h2>✦ Projekt-Assistent</h2><p id="assistant-hint">Gestalte deinen Arbeitsplatz. Der Assistent schlägt vor, du entscheidest.</p><button id="assistant-button" class="primary full">Aufbau begleiten</button><small id="model-status">Verbindung wird geprüft.</small></section>
-  <section class="inspector-section"><h2>Fensterkontext</h2><div id="window-inspector"></div></section>
-  <section class="inspector-section"><h2>✓ Prüfung & Freigabe</h2><p id="review-status">Keine produktive Freigabequelle.</p><button id="review-button" class="full">Review vorbereiten</button></section>
-  <section class="inspector-section"><h2>ϟ Automationen</h2><div id="automation-summary"></div><button data-view="automations" class="text-button">Abläufe gestalten ↗</button></section>
-  <section class="inspector-section"><h2>▤ Projektwissen</h2><button id="knowledge-button" class="text-button">Memory & Quellen öffnen ↗</button></section>
+  <section class="inspector-section"><h2>✦ Project assistant</h2><p id="assistant-hint">Shape your workspace. The assistant suggests; you decide.</p><button id="assistant-button" class="primary full">Guide setup</button><small id="model-status">Checking connection.</small></section>
+  <section class="inspector-section"><h2>Window context</h2><div id="window-inspector"></div></section>
+  <section class="inspector-section"><h2>✓ Review & approval</h2><p id="review-status">No production approval source connected.</p><button id="review-button" class="full">Prepare review</button></section>
+  <section class="inspector-section"><h2>ϟ Automations</h2><div id="automation-summary"></div><button data-view="automations" class="text-button">Design workflows ↗</button></section>
+  <section class="inspector-section"><h2>▤ Project knowledge</h2><button id="knowledge-button" class="text-button">Open memory & sources ↗</button></section>
  </aside>
 </div>
-<footer class="statusbar"><button id="events-button">☷ Ereignisverlauf</button><span id="stream-state">Lokaler Kanal · verbindet</span><span id="bottom-context">Geschäftlich · Einzelplatz</span><span class="status-spacer"></span><button id="motion-button" aria-pressed="false">Ⅱ Bewegung pausieren</button><span id="revision-footer">0.4 / lokal</span></footer>
+<footer class="statusbar"><button id="events-button">☷ Event history</button><span id="stream-state">Local channel · connecting</span><span id="bottom-context">Business · single user</span><span class="status-spacer"></span><button id="motion-button" aria-pressed="false">Ⅱ Pause motion</button><span id="revision-footer">0.5 / local</span></footer>
 <div id="toast" role="status" aria-live="polite"></div>
-<dialog id="modal"><div class="modal-head"><h2 id="modal-title"></h2><button id="modal-close" aria-label="Dialog schließen">×</button></div><div id="modal-content"></div></dialog>
+<dialog id="modal"><div class="modal-head"><h2 id="modal-title"></h2><button id="modal-close" aria-label="Close dialog">×</button></div><div id="modal-content"></div></dialog>
 </body></html>

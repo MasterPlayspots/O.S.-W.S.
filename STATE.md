@@ -1,3 +1,13 @@
+# STATE · O.A. - O.S 0.5.0
+
+17 November 2026. English controls, setup, fixed server/CLI messages and synthetic examples; OurArk graphite/mint branding. English screenshots are under `docs/screenshots/*-en.jpg`. Existing saved layouts, notes and imported content are not rewritten.
+
+Validation: 55/55 tests on Node.js 24.22.1/Linux. Browser checks: English six-pane layout saved; local repository and fixture-memory checks succeeded; memory provenance displayed. See `docs/VERIFICATION_0.5.md`.
+
+Scope remains a local single-user application. No server migration, live external agent control, automatic memory injection, cloud connectors or social publication added. The original UNIFORCE source remains in Git history.
+
+## Previous release record
+
 # STATE · O.A. - O.S 0.4.0
 
 Stand: 17.11.2026. Offizieller White-Label-Produktname **O.A. - O.S**, zugehörig zu **ourark.io**. Nutzerauftrag: öffentlich halten, Produkt/README vervollständigen, echte Screenshots, Produktbericht, einfacher Einstieg/Memory und 30-Tage-Marketingpaket mit Claude-Code-Übergabe.

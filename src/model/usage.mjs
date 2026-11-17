@@ -4,29 +4,29 @@ const nullableCount=v=>v===null||(Number.isSafeInteger(v)&&v>=0);
 export function validateUsage(r){
  fields(r,['requestId','attemptId','sessionId','modelId','revision','final','kind',...counters,'totalSemantics','cost','source','quality','observedAt'],'Usage');
  for(const k of ['requestId','attemptId','sessionId'])ident(r[k]);if(r.modelId!==null)text(r.modelId,160);
- if(!Number.isSafeInteger(r.revision)||r.revision<1||typeof r.final!=='boolean'||!['snapshot','delta'].includes(r.kind))throw Error('Usage-Revision/Typ ungültig.');
- for(const k of counters)if(!nullableCount(r[k]))throw Error('Negative/fehlende Usage-Zähler müssen null sein.');
- if(!['provider_reported','disjoint_io','unknown'].includes(r.totalSemantics)||!['reported','estimated','demo'].includes(r.quality))throw Error('Usage-Herkunft fehlt.');
- text(r.source,160);if(!Number.isFinite(Date.parse(r.observedAt)))throw Error('Usage-Zeit fehlt.');
- if(r.cost!==null){fields(r.cost,['value','currency','quality','priceVersion'],'Kosten');if(!Number.isFinite(r.cost.value)||r.cost.value<0||!['EUR','USD'].includes(r.cost.currency)||!['reported','estimated','demo'].includes(r.cost.quality))throw Error('Kosten ungültig.');text(r.cost.priceVersion,100);}
+ if(!Number.isSafeInteger(r.revision)||r.revision<1||typeof r.final!=='boolean'||!['snapshot','delta'].includes(r.kind))throw Error('Invalid usage revision or type.');
+ for(const k of counters)if(!nullableCount(r[k]))throw Error('Unknown or negative usage counts must be represented as null.');
+ if(!['provider_reported','disjoint_io','unknown'].includes(r.totalSemantics)||!['reported','estimated','demo'].includes(r.quality))throw Error('Usage provenance is missing.');
+ text(r.source,160);if(!Number.isFinite(Date.parse(r.observedAt)))throw Error('Usage timestamp is missing.');
+ if(r.cost!==null){fields(r.cost,['value','currency','quality','priceVersion'],'Costs');if(!Number.isFinite(r.cost.value)||r.cost.value<0||!['EUR','USD'].includes(r.cost.currency)||!['reported','estimated','demo'].includes(r.cost.quality))throw Error('Invalid costs.');text(r.cost.priceVersion,100);}
  return structuredClone(r);
 }
 export function applyUsage(records,input){
  const r=validateUsage(input),key=x=>x.requestId+':'+x.attemptId;
  const index=records.findIndex(x=>key(x)===key(r)),old=records[index];
- if(old&&(old.sessionId!==r.sessionId||old.modelId!==r.modelId||old.source!==r.source))throw Error('Request-Zuordnung darf nicht wechseln.');
+ if(old&&(old.sessionId!==r.sessionId||old.modelId!==r.modelId||old.source!==r.source))throw Error('Request associations must not change.');
  if(old&&r.revision<=old.revision)return records;
  if(old?.final&&!r.final)return records;
  let next=r;
  if(r.kind==='delta'&&old){
-  if(old.final)throw Error('Delta nach terminalem Snapshot abgelehnt.');
-  if(r.revision!==old.revision+1)throw Error('Delta-Lücke: neuen Snapshot liefern.');
+  if(old.final)throw Error('Delta rejected after a final snapshot.');
+  if(r.revision!==old.revision+1)throw Error('Delta gap: provide a new snapshot.');
   next={...r};for(const k of counters)next[k]=old[k]===null||r[k]===null?null:old[k]+r[k];
   if(old.cost&&r.cost&&old.cost.currency===r.cost.currency&&old.cost.priceVersion===r.cost.priceVersion)next.cost={...r.cost,value:old.cost.value+r.cost.value};
   else next.cost=null;
-  for(const k of counters)if(!nullableCount(next[k]))throw Error('Usage-Zähler außerhalb des sicheren Zahlenbereichs.');
+  for(const k of counters)if(!nullableCount(next[k]))throw Error('Usage count is outside the safe integer range.');
   next.kind='snapshot';
- }else if(r.kind==='delta')throw Error('Erster Usage-Wert muss ein Snapshot sein.');
+ }else if(r.kind==='delta')throw Error('The first usage record must be a snapshot.');
  const result=records.slice();if(index<0)result.push(next);else result[index]=next;return result;
 }
 export function aggregateUsage(records,{sessionId=null,from=null,to=null}={}){

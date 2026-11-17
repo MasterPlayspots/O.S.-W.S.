@@ -6,11 +6,11 @@ export function connectEvents({url,session,after=0,onEvent,onState}){
    try{
     const next=new URL(url);next.searchParams.set('after',cursor);
     const response=await fetch(next,{headers:{'x-oa-session':session},signal:controller.signal});
-    if(!response.ok)throw Error('Ereigniskanal nicht erreichbar ('+response.status+').');
+    if(!response.ok)throw Error('Event channel unavailable ('+response.status+').');
     onState('connected');const reader=response.body.getReader(),decoder=new TextDecoder();let buffer='';
     while(!stopped){
      const {done,value}=await reader.read();if(done)break;buffer+=decoder.decode(value,{stream:true});
-     if(buffer.length>65536)throw Error('Ereignis zu groß.');
+     if(buffer.length>65536)throw Error('Event is too large.');
      let end;while((end=buffer.indexOf('\n\n'))>=0){
       const block=buffer.slice(0,end);buffer=buffer.slice(end+2);
       for(const line of block.split('\n'))if(line.startsWith('data: ')){
@@ -20,7 +20,7 @@ export function connectEvents({url,session,after=0,onEvent,onState}){
       }
      }
     }
-    if(!stopped)throw Error('Ereigniskanal getrennt.');
+    if(!stopped)throw Error('Event channel disconnected.');
    }catch(error){if(stopped)break;onState('reconnecting');}
    await wait(2500);
   }

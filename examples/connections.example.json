@@ -3,8 +3,8 @@
   "connections": [
     {
       "id": "project-memory",
-      "label": "Projekt-Memory · Beispiel",
-      "purpose": "Synthetische Beispiele für Produktentscheidungen und Abläufe. Lokale Datei, nur lesend.",
+      "label": "Project memory · Example",
+      "purpose": "Synthetic examples of product decisions and workflows. Local file, read only.",
       "type": "memory-json",
       "project": {"id": "workspace-core", "scope": "business"},
       "path": "memory.example.json",

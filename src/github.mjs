@@ -1,7 +1,7 @@
 /** Explicit, token-free reads of one public repository. Never follows redirects. */
 export function repositoryName(value) {
   if (typeof value !== 'string' || !/^[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,38})\/[a-zA-Z0-9._-]{1,100}$/.test(value) || ['.','..'].includes(value.split('/')[1])) {
-    throw new Error('Repository als owner/name angeben, ohne URL oder Zugangsdaten.');
+    throw new Error('Enter the repository as owner/name, without a URL or credentials.');
   }
   return value;
 }
@@ -22,14 +22,14 @@ export async function readPublicRepository(name, {fetchImpl=fetch, now=Date.now,
     }});
     if (response.status!==200) {
       const code=response.status===404?'not_found': [403,429].includes(response.status)?'rate_or_access_limit':response.status>=300&&response.status<400?'redirect_refused':'upstream_error';
-      throw new ConnectorError(code, {not_found:'Öffentliches Repository nicht gefunden.',rate_or_access_limit:'GitHub begrenzt den Zugriff. Bitte später erneut versuchen.',redirect_refused:'Repository wurde verschoben. Bitte den aktuellen Namen eingeben.',upstream_error:'GitHub konnte die Quelle nicht liefern.'}[code]);
+      throw new ConnectorError(code, {not_found:'Public repository not found.',rate_or_access_limit:'GitHub is limiting access. Please try again later.',redirect_refused:'The repository has moved. Please enter its current name.',upstream_error:'GitHub could not return the source.'}[code]);
     }
-    if (!response.headers.get('content-type')?.includes('json')) throw new ConnectorError('invalid_response','GitHub lieferte keine JSON-Antwort.');
-    if (Number(response.headers.get('content-length'))>262144) throw new ConnectorError('oversize','Antwort überschreitet die Lesegrenze.');
+    if (!response.headers.get('content-type')?.includes('json')) throw new ConnectorError('invalid_response','GitHub did not return a JSON response.');
+    if (Number(response.headers.get('content-length'))>262144) throw new ConnectorError('oversize','Response exceeds the read limit.');
     const chunks=[]; let size=0;
     for await (const chunk of response.body) {
       size+=chunk.byteLength;
-      if(size>262144) throw new ConnectorError('oversize','Antwort überschreitet die Lesegrenze.');
+      if(size>262144) throw new ConnectorError('oversize','Response exceeds the read limit.');
       chunks.push(Buffer.from(chunk));
     }
     const data=JSON.parse(Buffer.concat(chunks).toString('utf8'));
@@ -38,7 +38,7 @@ export async function readPublicRepository(name, {fetchImpl=fetch, now=Date.now,
       !str(data.default_branch,255) || !(data.language===null||str(data.language,80)) || typeof data.archived!=='boolean' ||
       !['stargazers_count','open_issues_count'].every(k=>Number.isSafeInteger(data[k])&&data[k]>=0) ||
       !(data.pushed_at===null||(str(data.pushed_at,40)&&Number.isFinite(Date.parse(data.pushed_at))))) {
-      throw new ConnectorError('invalid_response','Repository-Antwort passt nicht zum angefragten öffentlichen Projekt.');
+      throw new ConnectorError('invalid_response','Repository response does not match the requested public project.');
     }
     const observed=now();
     // Allowlist only: no owner profile, description, email, raw API payload or credentials.
@@ -48,7 +48,7 @@ export async function readPublicRepository(name, {fetchImpl=fetch, now=Date.now,
       evidence:{method:'GET',url,apiVersion:'2026-03-10'},access:'anonymous_public_read'};
   } catch(error) {
     if(error instanceof ConnectorError) throw error;
-    throw new ConnectorError(controller.signal.aborted?'timeout':'network_or_response_error',controller.signal.aborted?'GitHub antwortet nicht rechtzeitig.':'GitHub ist nicht erreichbar oder lieferte ungültige Daten.');
+    throw new ConnectorError(controller.signal.aborted?'timeout':'network_or_response_error',controller.signal.aborted?'GitHub did not respond in time.':'GitHub is unreachable or returned invalid data.');
   } finally {
     clearTimeout(timer);
     if(response?.body && !response.bodyUsed) await response.body.cancel().catch(()=>{});

@@ -10,11 +10,11 @@ export async function createRepoReader(directory,{allowWrite=false}={}){
  const root=await realpath(resolve(directory));let snapshot=null,queue=Promise.resolve();
  async function git(args){return (await run('git',['-C',root,...args],{timeout:5000,maxBuffer:1024*1024,env:{...process.env,GIT_TERMINAL_PROMPT:'0'}})).stdout;}
  async function readPath(file){
-  if(!allowed(file)||!snapshot?.files.some(f=>f.id===file))throw Error('Datei nicht im freigegebenen Bestand.');
+  if(!allowed(file)||!snapshot?.files.some(f=>f.id===file))throw Error('File is not in the authorized file inventory.');
   const path=join(root,file),resolved=await realpath(path);
-  if(relative(root,resolved).startsWith('..')||resolved!==path||(await lstat(path)).isSymbolicLink())throw Error('Dateiverweis außerhalb des Projekts.');
-  const info=await lstat(path);if(!info.isFile()||info.size>65536)throw Error('Datei nicht lesbar oder größer als 64 KiB.');
-  const content=await readFile(path,'utf8');if(content.includes('\0')||secret(content))throw Error('Datei enthält Binärdaten oder ein erkanntes Geheimnismuster.');
+  if(relative(root,resolved).startsWith('..')||resolved!==path||(await lstat(path)).isSymbolicLink())throw Error('File reference is outside the project.');
+  const info=await lstat(path);if(!info.isFile()||info.size>65536)throw Error('File is unreadable or larger than 64 KiB.');
+  const content=await readFile(path,'utf8');if(content.includes('\0')||secret(content))throw Error('File contains binary data or a detected secret pattern.');
   return {id:file,name:file,content,hash:hash(content),quality:'reported',source:'selected-local-repository',observedAt:new Date().toISOString()};
  }
  return {
@@ -25,10 +25,10 @@ export async function createRepoReader(directory,{allowWrite=false}={}){
   },
   getSnapshot(){return snapshot;},read:readPath,
   write(file,content,baseHash){
-   if(!allowWrite)throw Error('Dateischreiben nicht freigegeben. --allow-file-write am Arbeits-Host erforderlich.');
-   if(typeof content!=='string'||Buffer.byteLength(content)>65536||secret(content))throw Error('Ungültiger Dateiinhalt.');
+   if(!allowWrite)throw Error('File writes are not enabled. Start with --allow-file-write on the host.');
+   if(typeof content!=='string'||Buffer.byteLength(content)>65536||secret(content))throw Error('Invalid file content.');
    const action=queue.then(async()=>{
-    const old=await readPath(file);if(old.hash!==baseHash){const e=Error('Datei wurde inzwischen geändert. Entwurf bleibt erhalten.');e.status=409;throw e;}
+    const old=await readPath(file);if(old.hash!==baseHash){const e=Error('The file has changed since it was read. Your draft is preserved.');e.status=409;throw e;}
     const path=join(root,file),tmp=join(dirname(path),'.uf-'+randomUUID()+'.tmp'),info=await lstat(path);
     try{await writeFile(tmp,content,{flag:'wx',mode:info.mode&0o777});await rename(tmp,path);}finally{await rm(tmp,{force:true});}
     return readPath(file);

@@ -5,10 +5,10 @@ export function createWindowManager({container,onSelect,onAction,onGeometry,make
  function create(w){
   const title=node('span',{class:'window-title'}),context=node('div',{class:'window-context'}),meta=node('div',{class:'window-meta'}),body=node('div',{class:'window-body'}),foot=node('div',{class:'window-foot'});
   const controls=node('div',{class:'window-tools'});
-  const buttons={};for(const[action,label,tooltip]of [['pin','◇','Fenster anheften'],['split','⊞','Fenster duplizieren'],['minimize','−','Minimieren'],['maximize','⤢','Vergrößern / zurück'],['close','×','Fenster schließen']])buttons[action]=button(label,e=>{e.stopPropagation();onAction(w.id,action);},{'aria-label':tooltip,title:tooltip});
+  const buttons={};for(const[action,label,tooltip]of [['pin','◇','Pin window'],['split','⊞','Duplicate window'],['minimize','−','Minimize'],['maximize','⤢','Maximize / restore'],['close','×','Close window']])buttons[action]=button(label,e=>{e.stopPropagation();onAction(w.id,action);},{'aria-label':tooltip,title:tooltip});
   controls.append(...Object.values(buttons));
   const header=node('div',{class:'window-header'},node('span',{class:'window-dot'}),title,controls);
-  const resize=button('◢',()=>{}, {class:'resize-handle','aria-label':'Fenstergröße ändern',title:'Ziehen oder Maße im Kontext bearbeiten'});
+  const resize=button('◢',()=>{}, {class:'resize-handle','aria-label':'Resize window',title:'Drag to resize or edit dimensions in the context panel'});
   const el=node('article',{class:'window','data-window-id':w.id,tabindex:'0','aria-label':w.title},header,context,meta,body,foot,resize);
   const entry={el,title,context,meta,body,foot,header,resize,buttons,window:w,pane:makePane(w,body,foot)};
   el.addEventListener('pointerdown',()=>onSelect(w.id));
@@ -23,7 +23,7 @@ export function createWindowManager({container,onSelect,onAction,onGeometry,make
   e.preventDefault();const r=container.getBoundingClientRect(),style=getComputedStyle(container),gap=parseFloat(style.columnGap)||12,row=parseFloat(style.gridAutoRows)||73;
   drag={entry,resizing,startX:e.clientX,startY:e.clientY,rect:{...entry.window.rect},col:(r.width+gap)/12,row:row+gap};
   e.currentTarget.setPointerCapture(e.pointerId);entry.el.classList.add('dragging');
-  const move=ev=>{if(!drag)return;const dx=ev.clientX-drag.startX,dy=ev.clientY-drag.startY;if(!resizing)entry.el.style.transform=`translate(${dx}px,${dy}px)`;else entry.el.style.outline='2px dashed var(--uf-bronze)';};
+  const move=ev=>{if(!drag)return;const dx=ev.clientX-drag.startX,dy=ev.clientY-drag.startY;if(!resizing)entry.el.style.transform=`translate(${dx}px,${dy}px)`;else entry.el.style.outline='2px dashed var(--oa-accent)';};
   const finish=ev=>{const d=drag;drag=null;e.currentTarget.removeEventListener('pointermove',move);e.currentTarget.removeEventListener('pointerup',finish);e.currentTarget.removeEventListener('pointercancel',cancel);entry.el.style.transform='';entry.el.style.outline='';entry.el.classList.remove('dragging');if(!d)return;const dx=Math.round((ev.clientX-d.startX)/d.col),dy=Math.round((ev.clientY-d.startY)/d.row),rect={...d.rect};if(resizing){rect.w+=dx;rect.h+=dy;}else{rect.x+=dx;rect.y+=dy;}onGeometry(entry.window.id,rect);};
   const cancel=()=>{drag=null;entry.el.style.transform='';entry.el.style.outline='';entry.el.classList.remove('dragging');e.currentTarget.removeEventListener('pointermove',move);e.currentTarget.removeEventListener('pointerup',finish);e.currentTarget.removeEventListener('pointercancel',cancel);};
   e.currentTarget.addEventListener('pointermove',move);e.currentTarget.addEventListener('pointerup',finish);e.currentTarget.addEventListener('pointercancel',cancel);
@@ -35,8 +35,8 @@ export function createWindowManager({container,onSelect,onAction,onGeometry,make
     for(const[k,v]of Object.entries(w.rect))e.el.style.setProperty('--'+k,v);e.el.style.setProperty('--order',w.mobileOrder);e.el.style.setProperty('--level',w.level);
     e.buttons.pin.textContent=w.pinned?'◆':'◇';e.buttons.pin.setAttribute('aria-pressed',String(w.pinned));for(const k of ['pin','split','minimize','close'])e.buttons[k].disabled=readonly;e.resize.hidden=readonly||w.pinned;
     const s=model.data.sessions.find(s=>s.id===w.sessionId),t=model.data.tasks.find(t=>t.id===w.taskId);
-    e.context.textContent=(t?.title||'Projektkontext')+' · '+(s?.branch||model.repo?.branch||'Branch nicht gemeldet');
-    e.meta.textContent=s?`${s.runtime} · ${s.effectiveModelId||'Modell nicht gemeldet'} · ${s.quality==='demo'?'DEMO':s.state}`:(model.sourceMode==='demo'?'DEMONSTRATION':'Ausgewählte Quelle');
+    e.context.textContent=(t?.title||'Project context')+' · '+(s?.branch||model.repo?.branch||'Branch not reported');
+    e.meta.textContent=s?`${s.runtime} · ${s.effectiveModelId||'Model not reported'} · ${s.quality==='demo'?'DEMO':s.state}`:(model.sourceMode==='demo'?'DEMONSTRATION':'Selected source');
     e.pane.update(w,model,readonly);
    }
    for(const[id,e]of entries)if(!all.some(w=>w.id===id)){e.pane.dispose?.();e.el.remove();entries.delete(id);}

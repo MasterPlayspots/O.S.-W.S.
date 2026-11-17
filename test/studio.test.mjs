@@ -53,7 +53,7 @@ test('concurrent revisions conflict without overwriting the winning profile',asy
     const results=await Promise.allSettled([store.save(profile(),0),store.save(other,0)]);
     assert.equal(results.filter(r=>r.status==='fulfilled').length,1);assert.equal(results.find(r=>r.status==='rejected').reason.revision,1);
     assert.equal((await store.read(preferences.project)).profile.preferences.appearance.depth,preferences.appearance.depth);
-    await assert.rejects(openStore(dir),/gesperrt/);
+    await assert.rejects(openStore(dir),/locked/);
   }finally{await store.close();await rm(dir,{recursive:true,force:true});}
 });
 test('invalid profiles and corrupt stored state do not silently overwrite data',async()=>{
@@ -94,7 +94,7 @@ test('end-to-end preview, explicit read, scoped cache, expiry, revision conflict
   const privateProfile=profile();privateProfile.preferences.project.scope='private';assert.equal((await (await f.call('/api/preview',{profile:privateProfile})).json()).source,null);
   const saved=await f.call('/api/profile',{profile:p,baseRevision:0});assert.equal(saved.status,200);assert.equal((await saved.json()).revision,1);
   assert.equal((await f.call('/api/profile',{profile:p,baseRevision:0})).status,409);
-  assert.equal((await (await f.call('/api/profile', {profile:{...p,token:'REJECT'},baseRevision:1})).json()).error,'Ungültige Profilfelder.');
+  assert.equal((await (await f.call('/api/profile', {profile:{...p,token:'REJECT'},baseRevision:1})).json()).error,'Invalid profile fields.');
   const loaded=await (await f.call(`/api/profile?project=${p.preferences.project.id}&scope=business`)).json();assert.deepEqual(loaded.profile,p);
   f.advance(15*60*1000);preview=await (await f.call('/api/preview',body)).json();assert.equal(preview.sourceFresh,false);assert.equal(preview.plan.dots.find(d=>d.capability==='project.metadata.read').resolution.status,'stale');assert.equal(f.count,1);
   assert.ok(!(await readdir(f.dir)).some(name=>name.includes('github')));

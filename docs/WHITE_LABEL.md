@@ -1,6 +1,6 @@
 # White-Label
 
-O.A. - O.S gehört zu ourark.io. Ein eigener Fork darf Name und Gestaltung unter Beibehaltung des MIT-Hinweises anpassen. Die Standardoberfläche nutzt Graphit, helle Typografie und Koralle `#F76B5C`; lokal eingebundene Typografie-Systemfonts und ein neu erstelltes O.A.-Monogramm.
+O.A. - O.S gehört zu ourark.io. Ein eigener Fork darf Name und Gestaltung unter Beibehaltung des MIT-Hinweises anpassen. Die Standardoberfläche nutzt Graphitgrün `#101816`, helle Typografie und Mint `#8DD7BA`; lokal eingebundene Typografie-Systemfonts und ein neu erstelltes O.A.-Monogramm.
 
 `npm start -- --brand-config /PRIVAT/brand.json` lädt die Konfiguration beim Start. Beispiel: `examples/brand.example.json`. Alle Felder sind optional, unbekannte Felder werden abgelehnt; `schemaVersion` bleibt 1.
 

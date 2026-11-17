@@ -4,9 +4,9 @@
 
 Bring code, agent-session metadata, project progress, token usage and your own memory into one personal workspace. Start locally, make it yours, then connect sources one at a time.
 
-**v0.4.0 · MIT · Node.js 24+ · Zero npm dependencies · Local single-user application**
+**v0.5.0 · MIT · Node.js 24+ · Zero npm dependencies · Local single-user application**
 
-![O.A. - O.S with three code windows and three clearly marked demo sessions](docs/screenshots/dashboard.jpg)
+![O.A. - O.S with three code windows and three clearly marked demo sessions](docs/screenshots/dashboard-en.jpg)
 
 This is a working, extensible local product release. Screenshots use **synthetic demo sessions and usage**, alongside an explicitly read local repository. They do not show live Claude, Codex or Gemini agents executing through the dashboard. No cloud account or API key is required for the core application.
 
@@ -23,11 +23,11 @@ npm start
 Open **http://127.0.0.1:4317/**. No `npm install`, database or build step. Stop with Ctrl+C. The double dot before `git` is intentional: the repository name ends in a dot.
 
 1. Explore the labeled demonstration and save a layout.
-2. Open **Verbindungen** and explicitly read the selected local repository.
-3. Switch to **Verbundene Quellen** for imported metadata.
+2. Open **Connections** and explicitly read the selected local repository.
+3. Switch to **Connected sources** for imported metadata.
 4. Connect your own memory using the instructions below.
 
-For a developer demo with configured synthetic memory, run `npm run dev`, then **Verbindungen → Verbindung prüfen → Memory öffnen**. The fixture is only read after your click. The UI is currently German; this README and campaign captions are English.
+For a developer demo with configured synthetic memory, run `npm run dev`, then **Connections → Check connection → Open memory**. The fixture is only read after your click. The interface, setup wizard, server messages and synthetic examples are English. Existing saved titles, notes and imported content keep their original language.
 
 ## Why use it?
 
@@ -56,7 +56,7 @@ These are functional benefits, not measured productivity or cost-saving claims.
 
 ## Know what is connected
 
-![Connection Center after explicit local repo and synthetic memory checks](docs/screenshots/connections.jpg)
+![Connection Center after explicit local repo and synthetic memory checks](docs/screenshots/connections-en.jpg)
 
 **Green:** successful local check within the stated validity period. **Red:** failed check. **Amber:** unverified or stale. **Gray:** disabled, unavailable, waiting or missing. Labels accompany color. Reopen the view to refresh status; a successful check is not continuous monitoring or verification of source content.
 
@@ -64,17 +64,19 @@ An available bridge is not a running agent. Imports remain labeled as imports. C
 
 ## Connect your memory
 
-![Read-only memory with synthetic entries, provenance and context export](docs/screenshots/memory.jpg)
+![Read-only memory with synthetic entries, provenance and context export](docs/screenshots/memory-en.jpg)
 
 ```sh
 npm start -- --connections-config examples/connections.example.json
 ```
 
-Open **Verbindungen**, check **Projekt-Memory · Beispiel**, then open **Memory**. Search title/content/tags and export an entry with source and SHA-256 hashes.
+Open **Connections**, check **Project memory · Example**, then open **Memory**. Search title/content/tags and export an entry with source and SHA-256 hashes.
 
 For your own data, copy both connection and memory examples to a private directory, update path/project/scope, and pass the connection file to `--connections-config`. Paths resolve relative to that file. Do not commit personal memory.
 
 This is **read-only local JSON**, not automatic RAG, vector search, training or implicit model-context injection. Existing knowledge systems can export this schema as a first integration step. [Exact schema and guide →](docs/MEMORY.md)
+
+The default OurArk palette combines graphite and mint. [Brand direction →](docs/OURARK_BRAND_2026.md)
 
 ## Make it your brand
 
@@ -118,7 +120,7 @@ npm test
 npm run dev
 ```
 
-**54 tests passed** for v0.4 on Node.js 24.22.1/Linux. [Verification scope →](docs/VERIFICATION_0.4.md). No npm dependencies. `private: true` in `package.json` prevents accidental npm publication; it does **not** make GitHub private.
+**55 tests passed** for v0.5 on Node.js 24.22.1/Linux. [Verification scope →](docs/VERIFICATION_0.5.md). No npm dependencies. `private: true` in `package.json` prevents accidental npm publication; it does **not** make GitHub private.
 
 | Directory | Responsibility |
 |---|---|
