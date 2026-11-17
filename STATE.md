@@ -2,6 +2,12 @@
 
 Stand: 17.11.2026. Feature-Entwicklung aus Basis `3b82b64a85a1546c495a876443d6eb3f8cd9f499` (0.2.0), isolierter Zweig `feat/uniforce-workspace`. Das bisherige Hauptbranch-/Produktionssystem wird nicht durch lokalen Start verändert.
 
+## Übertragung und Nachweis
+
+Der geprüfte Code wurde am 17.11.2026 in den separaten öffentlichen Branch `feat/uniforce-workspace` übertragen, Code-Commit `eed568e08a6c06f140ee83204d256480c15b3069`. Remote-Tree und geprüfter lokaler Tree stimmen exakt überein: `b3de9e0be440f56fcf90551fe73d863121568e8f`. Remote-Branches anschließend gelesen: `main` bleibt `3b82b64a85a1546c495a876443d6eb3f8cd9f499`. Kein Merge, kein Deployment, keine Zielinstallation.
+
+`git diff --cached --check` ohne Befund nach Bereinigung. Muster-/Pfadscan über 35 übertragene Dateien: keine Treffer für die geprüften Token-/Private-Key-Muster oder ausgeschlossene Laufzeitordner. Dies war kein vollständiger Gitleaks-/DLP-Audit. Browsernachweis liegt unter `docs/verification/uniforce-desktop.jpg`. Die lokale Automation erzeugte auch bei zweifachem identischem Ereignis genau einen Entwurf.
+
 ## Auftrag und Quellen
 
 - Nutzerauftrag: vorhandenes O.S.-W.S.-Repo für den UNIFORCE-Arbeitsalltag gemäß hochgeladenem Konzept und Handoff umbauen, prüfbar fertigstellen und zur Übertragung/Anbindung vorbereiten.
